@@ -1,0 +1,17 @@
+PATH
+  remote: .
+  specs:
+    eac_rails_base0 (0.0.0)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  eac_rails_base0!
+
+BUNDLED WITH
+   1.16.1
