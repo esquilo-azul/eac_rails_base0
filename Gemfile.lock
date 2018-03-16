@@ -4,7 +4,7 @@ PATH
     eac_rails_base0 (0.0.1)
       byebug
       coffee-rails (~> 4.1.0)
-      eac_users_support (~> 0.1.1)
+      eac_users_support (~> 0.1.2)
       jbuilder (~> 2.0)
       jquery-rails
       pg (~> 0.15)
