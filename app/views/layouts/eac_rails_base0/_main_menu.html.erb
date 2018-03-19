@@ -1,0 +1,5 @@
+<%= bootstrap_dropdown_menu({
+  'Administração' => {
+    ::EacUsersSupport::User.model_name.human(count: 2) => [eac_users_support.admin_users_path],
+  }
+}, class: 'navbar-left') %>
