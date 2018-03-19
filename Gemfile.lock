@@ -5,7 +5,7 @@ PATH
       byebug
       can_can_dry (~> 0.0.7)
       coffee-rails (~> 4.1.0)
-      eac_users_support (~> 0.1.2)
+      eac_users_support (~> 0.2.0)
       jbuilder (~> 2.0)
       jquery-rails
       pg (~> 0.15)
@@ -85,7 +85,7 @@ GEM
       railties (>= 4.1.0, < 5.1)
       responders
       warden (~> 1.2.3)
-    eac_users_support (0.1.2)
+    eac_users_support (0.2.0)
       active_scaffold (~> 3.4.33)
       devise (~> 4.1.0)
       rails (~> 4.2.5)
