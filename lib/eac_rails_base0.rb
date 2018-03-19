@@ -3,6 +3,7 @@
 require 'sass-rails'
 require 'jquery-rails'
 require 'turbolinks'
+require 'bootstrap-sass'
 require 'can_can_dry'
 require 'eac_rails_utils'
 require 'eac_users_support'

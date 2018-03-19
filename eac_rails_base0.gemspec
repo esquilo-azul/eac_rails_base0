@@ -15,6 +15,7 @@ Gem::Specification.new do |s|
 
   s.files = Dir['{lib}/**/*']
 
+  s.add_dependency 'bootstrap-sass', '~> 3.3.7'
   s.add_dependency 'byebug' # Development
   s.add_dependency 'can_can_dry', '~> 0.0.7'
   s.add_dependency 'coffee-rails', '~> 4.1.0'
