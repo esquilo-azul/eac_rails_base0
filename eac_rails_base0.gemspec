@@ -29,4 +29,5 @@ Gem::Specification.new do |s|
   s.add_dependency 'uglifier', '>= 1.3.0'
   s.add_dependency 'web-console', '~> 2.0' # Development
   s.add_runtime_dependency 'pg', '~> 0.15'
+  s.add_runtime_dependency 'rails_12factor' # Production
 end
