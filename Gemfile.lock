@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    eac_rails_base0 (0.0.2)
+    eac_rails_base0 (0.0.3)
       byebug
       coffee-rails (~> 4.1.0)
       eac_users_support (~> 0.1.2)
