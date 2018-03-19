@@ -7,7 +7,7 @@ PATH
       can_can_dry (~> 0.0.8)
       coffee-rails (~> 4.1.0)
       eac_rails_utils (~> 0.1.14)
-      eac_users_support (~> 0.2.0)
+      eac_users_support (~> 0.2.1)
       jbuilder (~> 2.0)
       jquery-rails
       pg (~> 0.15)
@@ -112,7 +112,7 @@ GEM
       ofx-parser (>= 1.1.0)
       rails (~> 4.2.1)
       virtus (>= 1.0.5)
-    eac_users_support (0.2.0)
+    eac_users_support (0.2.1)
       active_scaffold (~> 3.4.33)
       devise (~> 4.1.0)
       rails (~> 4.2.5)
