@@ -11,11 +11,8 @@ module EacRailsBase0
     end
 
     def devise_rules(user)
-      if user.new_record?
-        can :create, 'Devise::Session'
-      else
-        can :destroy, 'Devise::Session'
-      end
+      can :destroy, 'Devise::Session' unless user.new_record?
+      can :create, 'Devise::Session'
     end
 
     def administrator_rules(user)
