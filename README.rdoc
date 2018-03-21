@@ -1,0 +1,16 @@
+= MeuTest
+
+The Rails base #0 for E.A.C..
+
+{<img src="https://badge.fury.io/rb/eac_rails_base0.svg" alt="Gem Version" />
+}[https://badge.fury.io/rb/eac_rails_base0]
+{<img src="https://travis-ci.org/eduardobogoni/eac_rails_base0.svg?branch=master" alt="Build Status"
+/>}[https://travis-ci.org/eduardobogoni/eac_rails_base0]
+{<img src="https://api.codeclimate.com/v1/badges/268ee9c414fbad3a650e/maintainability"
+/>}[https://codeclimate.com/github/eduardobogoni/eac_rails_base0/maintainability]
+{<img src="https://api.codeclimate.com/v1/badges/268ee9c414fbad3a650e/test_coverage"
+/>}[https://codeclimate.com/github/eduardobogoni/eac_rails_base0/test_coverage]
+{<img src="https://beta.gemnasium.com/badges/github.com/eduardobogoni/can_can_dry.svg"
+alt="Dependency Status" />}[https://beta.gemnasium.com/projects/github.com/eduardobogoni/can_can_dry]
+{<img src="http://inch-ci.org/github/eduardobogoni/eac_rails_base0.svg?branch=master" alt="Inline docs" />
+}[http://inch-ci.org/github/eduardobogoni/eac_rails_base0]
