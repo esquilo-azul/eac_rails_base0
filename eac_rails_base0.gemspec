@@ -10,8 +10,10 @@ Gem::Specification.new do |s|
   s.name        = 'eac_rails_base0'
   s.version     = ::EacRailsBase0::VERSION
   s.authors     = ['Esquilo Azul Company']
-  s.summary     = 'Base padrão para aplicações Rails da Esquilo Azul Company.'
+  s.homepage    = 'https://github.com/esquilo-azul/eac_rails_base0'
+  s.summary     = 'A Rails base for multiple Rails projects developed by Esquilo Azul Company.'
   s.license     = 'MIT'
+  s.metadata    = { 'source_code_uri' => 'https://github.com/esquilo-azul/eac_rails_base0' }
 
   s.files = Dir['{lib}/**/*']
 
