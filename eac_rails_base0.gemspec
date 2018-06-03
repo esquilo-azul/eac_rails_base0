@@ -21,7 +21,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'byebug' # Development
   s.add_dependency 'can_can_dry', '~> 0.0.8'
   s.add_dependency 'coffee-rails', '~> 4.1.0'
-  s.add_dependency 'eac_rails_utils', '~> 0.1.14'
+  s.add_dependency 'eac_rails_utils', '~> 0.1', '>= 0.2.0'
   s.add_dependency 'eac_users_support', '~> 0.2.1'
   s.add_dependency 'jbuilder', '~> 2.0'
   s.add_dependency 'jquery-rails'

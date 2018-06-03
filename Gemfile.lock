@@ -6,7 +6,7 @@ PATH
       byebug
       can_can_dry (~> 0.0.8)
       coffee-rails (~> 4.1.0)
-      eac_rails_utils (~> 0.1.14)
+      eac_rails_utils (~> 0.1, >= 0.2.0)
       eac_users_support (~> 0.2.1)
       jbuilder (~> 2.0)
       jquery-rails
@@ -104,7 +104,7 @@ GEM
       railties (>= 4.1.0, < 5.1)
       responders
       warden (~> 1.2.3)
-    eac_rails_utils (0.1.14)
+    eac_rails_utils (0.2.0)
       activemodel-associations (>= 0.1.2)
       bootstrap-sass (>= 3.3.6)
       htmlbeautifier (>= 1.1.1)
