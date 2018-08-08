@@ -131,3 +131,4 @@ RSpec.configure do |config|
 end
 
 require 'eac_rails_base0/spec_helper/capybara'
+require 'eac_rails_base0/spec_helper/factory_bot'
