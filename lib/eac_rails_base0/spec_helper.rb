@@ -14,7 +14,6 @@
 # it.
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
-
 begin
   ActiveRecord::Migration.maintain_test_schema!
 rescue ActiveRecord::PendingMigrationError => ex
@@ -132,3 +131,4 @@ end
 
 require 'eac_rails_base0/spec_helper/capybara'
 require 'eac_rails_base0/spec_helper/factory_bot'
+require 'eac_rails_base0/spec_helper/eac_users_support'
