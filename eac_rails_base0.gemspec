@@ -15,7 +15,9 @@ Gem::Specification.new do |s|
   s.license     = 'MIT'
   s.metadata    = { 'source_code_uri' => 'https://github.com/esquilo-azul/eac_rails_base0' }
 
-  s.files = Dir['{app,config,lib}/**/*', 'Gemfile', 'README.rdoc']
+  s.files = Dir['{app,config,exe,lib}/**/*', 'Gemfile', 'README.rdoc']
+  s.bindir = 'exe'
+  s.executables = s.files.grep(%r{^exe/}) { |f| File.basename(f) }
 
   s.add_dependency 'bootstrap-sass', '~> 3.3.7'
   s.add_dependency 'byebug' # Development
