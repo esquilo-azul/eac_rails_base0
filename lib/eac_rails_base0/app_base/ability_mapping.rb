@@ -9,6 +9,7 @@ module EacRailsBase0
       def initialize
         map_devise
         map_controller 'EacUsersSupport::Admin::Users', :manage, ::EacUsersSupport::User
+        map_controller 'Aranha::Addresses', :manage, ::Aranha::Address
       end
     end
   end

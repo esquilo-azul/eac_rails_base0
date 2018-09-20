@@ -14,16 +14,23 @@ module EacRailsBase0
     end
 
     def base0_app_main_menu_entries
-      r = {
+      if respond_to?(APP_MAIN_MENU_ENTRIES_METHOD)
+        send(APP_MAIN_MENU_ENTRIES_METHOD, base0_app_main_menu_default_entries)
+      else
+        base0_app_main_menu_default_entries
+      end
+    end
+
+    def base0_app_main_menu_default_entries
+      {
         'Administração' => {
-          ::EacUsersSupport::User.model_name.human(count: 2) => [eac_users_support.admin_users_path]
+          ::EacUsersSupport::User.model_name.human(count: 2) =>
+            [eac_users_support.admin_users_path],
+          'Conteúdo remoto' =>  {
+            ::Aranha::Address.model_name.human(count: 2) => [aranha.addresses_path]
+          }
         }
       }
-      if respond_to?(APP_MAIN_MENU_ENTRIES_METHOD)
-        send(APP_MAIN_MENU_ENTRIES_METHOD, r)
-      else
-        r
-      end
     end
   end
 end

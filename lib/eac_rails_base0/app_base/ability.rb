@@ -20,6 +20,7 @@ module EacRailsBase0
         return unless user.administrator?
 
         can :manage, ::EacUsersSupport::User
+        can :manage, ::Aranha::Address
       end
     end
   end

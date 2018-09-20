@@ -4,3 +4,4 @@
 //= require eac_users_support/application
 //= require bootstrap-sprockets
 //= require eac_rails_utils
+//= require aranha/application

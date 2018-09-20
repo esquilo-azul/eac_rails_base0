@@ -2,4 +2,5 @@
 
 Rails.application.routes.draw do
   mount ::EacUsersSupport::Engine => '/'
+  mount ::Aranha::Engine => '/aranha'
 end

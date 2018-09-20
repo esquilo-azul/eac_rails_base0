@@ -1,6 +1,7 @@
 @import 'eac_users_support/application';
 @import 'eac_rails_base0/bootstrap_import';
 @import "eac_rails_utils";
+@import "aranha/application";
 
 .alert-notice {
   @extend .alert-info;
