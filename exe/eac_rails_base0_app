@@ -1,4 +1,6 @@
 #!/usr/bin/env ruby
+# frozen_string_literal: true
+
 require 'pathname'
 
 source_path = (Pathname.new(__FILE__).dirname + '../lib').expand_path
@@ -7,9 +9,9 @@ $LOAD_PATH << source_path
 require 'eac_rails_base0/app_generator/generator'
 
 if ARGV.empty?
-  puts "Please provide a path for the new application"
+  puts 'Please provide a path for the new application'
   puts
-  puts "See --help for more info"
+  puts 'See --help for more info'
   exit 1
 elsif ['-v', '--version'].include? ARGV[0]
   puts Suspenders::VERSION

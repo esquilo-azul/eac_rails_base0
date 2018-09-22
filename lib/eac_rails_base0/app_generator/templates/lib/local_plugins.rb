@@ -15,6 +15,7 @@ class LocalPlugins
       Dir.glob("#{root}/*/").each do |plugin_dir|
         next unless File.directory?(plugin_dir)
         next unless Dir.entries(plugin_dir).any? { |f| f.match(/\.gemspec/) }
+
         r << LocalPlugin.new(plugin_dir)
       end
     end

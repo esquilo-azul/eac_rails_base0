@@ -17,6 +17,7 @@ module EacRailsBase0
 
     def administrator_rules(user)
       return unless user.administrator?
+
       can :manage, ::EacUsersSupport::User
     end
   end

@@ -10,7 +10,7 @@ module EacRailsBase0
 
     def copy_bin
       copy_file 'rubocop.rb', 'bin/rubocop'
-      chmod 'bin', 0755 & ~File.umask, verbose: false
+      chmod 'bin', 0o755 & ~File.umask, verbose: false
     end
   end
 end

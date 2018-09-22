@@ -15,7 +15,7 @@ module EacRailsBase0
 
       protected
 
-      def get_builder_class # rubocop:disable Style/AccessorMethodName
+      def get_builder_class # rubocop:disable Naming/AccessorMethodName
         ::EacRailsBase0::AppGenerator::Builder
       end
     end

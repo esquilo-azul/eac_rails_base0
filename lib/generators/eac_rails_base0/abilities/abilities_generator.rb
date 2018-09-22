@@ -5,7 +5,7 @@ module EacRailsBase0
     source_root File.expand_path('templates', __dir__)
 
     def copy_bin
-      %w(ability ability_mapping).each do |base|
+      %w[ability ability_mapping].each do |base|
         copy_file "#{base}.rb", "lib/#{base}.rb"
       end
     end

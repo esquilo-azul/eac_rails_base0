@@ -2,7 +2,7 @@
 
 module EacRailsBase0
   class RspecGenerator < Rails::Generators::Base
-    source_root File.expand_path('../templates', __FILE__)
+    source_root File.expand_path('templates', __dir__)
 
     def create_initializer_files
       copy_file 'rspec.rc', '.rspec'

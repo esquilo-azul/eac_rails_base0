@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 module EacRailsBase0
   module AppGenerator
     class Builder < Rails::AppBuilder

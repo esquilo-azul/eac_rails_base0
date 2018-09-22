@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 require 'active_record/connection_adapters/postgresql/schema_statements'
 
 #
@@ -12,25 +13,27 @@ module ActiveRecord
     module PostgreSQL
       module SchemaStatements
         # Resets the sequence of a table's primary key to the maximum value.
-        def reset_pk_sequence!(table, pk = nil, sequence = nil) #:nodoc:
-          unless pk && sequence
+        def reset_pk_sequence!(table, pkey = nil, sequence = nil) #:nodoc:
+          unless pkey && sequence
             default_pk, default_sequence = pk_and_sequence_for(table)
-            pk ||= default_pk
+            pkey ||= default_pk
             sequence ||= default_sequence
           end
-          reset_pk_sequence_log(sequence, table, pk)
-          return unless pk && sequence
-          reset_pk_sequence_select_value(sequence, table, pk)
+          reset_pk_sequence_log(sequence, table, pkey)
+          return unless pkey && sequence
+
+          reset_pk_sequence_select_value(sequence, table, pkey)
         end
 
         private
 
-        def reset_pk_sequence_max_pk(table, pk)
-          select_value("SELECT MAX(#{quote_column_name pk}) FROM #{quote_table_name(table)}")
+        def reset_pk_sequence_max_pk(table, pkey)
+          select_value("SELECT MAX(#{quote_column_name pkey}) FROM #{quote_table_name(table)}")
         end
 
         def reset_pk_sequence_minvalue(max_pk, quoted_sequence)
           return nil unless max_pk.nil?
+
           if postgresql_version >= 100_000
             select_value('SELECT seqmin FROM pg_sequence WHERE seqrelid = ' \
                 "#{quote(quoted_sequence)}::regclass")
@@ -39,19 +42,19 @@ module ActiveRecord
           end
         end
 
-        def reset_pk_sequence_log(sequence, table, pk)
-          if @logger && pk && !sequence
-            @logger.warn "#{table} has primary key #{pk} with no default sequence"
-          end
+        def reset_pk_sequence_log(sequence, table, pkey)
+          return unless @logger && pkey && !sequence
+
+          @logger.warn "#{table} has primary key #{pkey} with no default sequence"
         end
 
-        def reset_pk_sequence_select_value(sequence, table, pk)
+        def reset_pk_sequence_select_value(sequence, table, pkey)
           quoted_sequence = quote_table_name(sequence)
-          max_pk = reset_pk_sequence_max_pk(table, pk)
+          max_pk = reset_pk_sequence_max_pk(table, pkey)
           minvalue = reset_pk_sequence_minvalue(max_pk, quoted_sequence)
-          select_value <<-end_sql, 'SCHEMA'
-              SELECT setval(#{quote(quoted_sequence)}, #{max_pk ? max_pk : minvalue}, #{max_pk ? true : false})
-          end_sql
+          select_value <<-END_SQL, 'SCHEMA'
+            SELECT setval(#{quote(quoted_sequence)}, #{max_pk || minvalue}, #{max_pk ? true : false})
+          END_SQL
         end
       end
     end
