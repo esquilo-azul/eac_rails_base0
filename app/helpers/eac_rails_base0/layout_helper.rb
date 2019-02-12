@@ -26,6 +26,7 @@ module EacRailsBase0
         'Administração' => {
           ::EacUsersSupport::User.model_name.human(count: 2) =>
             [eac_users_support.admin_users_path],
+          t('activerecord.models.scheduled_task.other') => [main_app.status_scheduled_tasks_path],
           'Conteúdo remoto' => {
             ::Aranha::Address.model_name.human(count: 2) => [aranha.addresses_path]
           }
