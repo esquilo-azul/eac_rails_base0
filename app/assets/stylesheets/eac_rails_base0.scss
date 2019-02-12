@@ -2,6 +2,7 @@
 @import 'eac_rails_base0/bootstrap_import';
 @import "eac_rails_utils";
 @import "aranha/application";
+@import "tasks_scheduler";
 
 .alert-notice {
   @extend .alert-info;

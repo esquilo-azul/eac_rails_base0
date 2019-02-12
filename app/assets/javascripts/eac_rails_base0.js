@@ -5,3 +5,4 @@
 //= require bootstrap-sprockets
 //= require eac_rails_utils
 //= require aranha/application
+//= require tasks_scheduler
