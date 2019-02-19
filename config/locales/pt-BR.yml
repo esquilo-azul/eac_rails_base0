@@ -11,5 +11,6 @@ pt-BR:
     main_menu:
       admin:
         aranha: Aranha
+        br_railties: BrRailties
         eac_users_support: Usuários
         tasks_scheduler: Agendador

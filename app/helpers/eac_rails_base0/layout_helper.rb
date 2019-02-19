@@ -38,7 +38,7 @@ module EacRailsBase0
     end
 
     def base0_app_main_menu_admin_gems
-      [::EacUsersSupport, ::TasksScheduler, ::Aranha]
+      [::EacUsersSupport, ::TasksScheduler, ::Aranha, ::BrRailties]
     end
 
     def eac_users_support_main_menu_admin_entries
@@ -56,6 +56,12 @@ module EacRailsBase0
     def aranha_main_menu_admin_entries
       {
         ::Aranha::Address.model_name.human(count: 2) => [aranha.addresses_path]
+      }
+    end
+
+    def br_railties_main_menu_admin_entries
+      {
+        ::BrRailties::FederalUnit.model_name.human(count: 2) => [br_railties.federal_units_path]
       }
     end
   end
