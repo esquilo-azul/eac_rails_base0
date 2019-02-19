@@ -23,14 +23,39 @@ module EacRailsBase0
 
     def base0_app_main_menu_default_entries
       {
-        'Administração' => {
-          ::EacUsersSupport::User.model_name.human(count: 2) =>
-            [eac_users_support.admin_users_path],
-          t('activerecord.models.scheduled_task.other') => [main_app.status_scheduled_tasks_path],
-          'Conteúdo remoto' => {
-            ::Aranha::Address.model_name.human(count: 2) => [aranha.addresses_path]
-          }
-        }
+        'Administração' => base0_app_main_menu_admin_entries
+      }
+    end
+
+    def base0_app_main_menu_admin_entries
+      h = {}
+      base0_app_main_menu_admin_gems.each do |gem_module|
+        identifier = gem_module.name.underscore
+        h[::I18n.t("eac_rails_base0.main_menu.admin.#{identifier}")] =
+          send("#{identifier}_main_menu_admin_entries")
+      end
+      h
+    end
+
+    def base0_app_main_menu_admin_gems
+      [::EacUsersSupport, ::TasksScheduler, ::Aranha]
+    end
+
+    def eac_users_support_main_menu_admin_entries
+      {
+        ::EacUsersSupport::User.model_name.human(count: 2) => [eac_users_support.admin_users_path]
+      }
+    end
+
+    def tasks_scheduler_main_menu_admin_entries
+      {
+        t('activerecord.models.scheduled_task.other') => [main_app.status_scheduled_tasks_path]
+      }
+    end
+
+    def aranha_main_menu_admin_entries
+      {
+        ::Aranha::Address.model_name.human(count: 2) => [aranha.addresses_path]
       }
     end
   end

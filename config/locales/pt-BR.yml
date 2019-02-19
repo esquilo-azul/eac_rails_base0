@@ -7,3 +7,9 @@ pt-BR:
     formats:
       default: "%d/%m/%Y %H:%M"
       short: '%d/%m/%y %H:%M'
+  eac_rails_base0:
+    main_menu:
+      admin:
+        aranha: Aranha
+        eac_users_support: Usuários
+        tasks_scheduler: Agendador
