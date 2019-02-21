@@ -22,6 +22,7 @@ module EacRailsBase0
         can :manage, ::EacUsersSupport::User
         can :manage, ::Aranha::Address
         can :manage, ::BrRailties::FederalUnit
+        can :manage, ::BrRailties::Municipality
         can :manage, ::ScheduledTask
       end
     end

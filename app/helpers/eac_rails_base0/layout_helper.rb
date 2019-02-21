@@ -61,7 +61,8 @@ module EacRailsBase0
 
     def br_railties_main_menu_admin_entries
       {
-        ::BrRailties::FederalUnit.model_name.human(count: 2) => [br_railties.federal_units_path]
+        ::BrRailties::FederalUnit.model_name.human(count: 2) => [br_railties.federal_units_path],
+        ::BrRailties::Municipality.model_name.human(count: 2) => [br_railties.municipalities_path]
       }
     end
   end
