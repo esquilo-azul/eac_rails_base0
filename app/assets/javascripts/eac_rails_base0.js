@@ -6,3 +6,4 @@
 //= require eac_rails_utils
 //= require aranha/application
 //= require tasks_scheduler
+//= require br_railties

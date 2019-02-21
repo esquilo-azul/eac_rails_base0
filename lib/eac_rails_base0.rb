@@ -9,6 +9,7 @@ require 'eac_rails_utils'
 require 'eac_users_support'
 require 'eac_rails_base0/engine'
 require 'tasks_scheduler'
+require 'br_railties'
 
 module EacRailsBase0
 end

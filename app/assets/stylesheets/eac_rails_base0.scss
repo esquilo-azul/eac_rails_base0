@@ -3,6 +3,7 @@
 @import "eac_rails_utils";
 @import "aranha/application";
 @import "tasks_scheduler";
+@import 'br_railties';
 
 .alert-notice {
   @extend .alert-info;
