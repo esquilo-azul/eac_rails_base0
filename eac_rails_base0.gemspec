@@ -20,7 +20,7 @@ Gem::Specification.new do |s|
   s.executables = s.files.grep(%r{^exe/}) { |f| File.basename(f) }
 
   s.add_dependency 'aranha', '~> 0.2', '>= 0.2.1'
-  s.add_dependency 'bootstrap-sass', '~> 3.3.7'
+  s.add_dependency 'bootstrap-sass', '~> 3.4.1'
   s.add_dependency 'br_railties', '~> 0.3'
   s.add_dependency 'byebug' # Development
   s.add_dependency 'can_can_dry', '~> 0.0.8'
