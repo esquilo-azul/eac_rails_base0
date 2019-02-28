@@ -16,3 +16,4 @@ end
 
 require_dependency 'eac_rails_base0/app_base/ability_mapping'
 require_dependency 'eac_rails_base0/app_base/ability'
+require_dependency 'eac_rails_base0/patches/url_for_patch'
