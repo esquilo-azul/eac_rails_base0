@@ -22,5 +22,13 @@ module EacRailsBase0
         redirect_to eac_users_support.new_user_session_path
       end
     end
+
+    class << self
+      def active_scaffold_controller_for(klass)
+        return ::EacUsersSupport::Admin::UsersController if klass == ::EacUsersSupport::User
+
+        super
+      end
+    end
   end
 end
