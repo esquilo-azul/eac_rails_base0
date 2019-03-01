@@ -31,6 +31,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'factory_bot_rails', '~> 4.0' # Test
   s.add_dependency 'jbuilder', '~> 2.0'
   s.add_dependency 'jquery-rails'
+  s.add_dependency 'jquery-ui-rails'
   s.add_dependency 'rails', '~> 4.2.10'
   s.add_dependency 'rspec-rails', '~> 3.7' # Test
   s.add_dependency 'rubocop' # Development

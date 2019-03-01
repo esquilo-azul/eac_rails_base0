@@ -4,6 +4,7 @@
 @import "aranha/application";
 @import "tasks_scheduler";
 @import 'br_railties';
+@import 'jquery-ui';
 
 .alert-notice {
   @extend .alert-info;

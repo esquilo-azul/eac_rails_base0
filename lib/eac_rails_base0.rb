@@ -2,6 +2,7 @@
 
 require 'sass-rails'
 require 'jquery-rails'
+require 'jquery-ui-rails'
 require 'turbolinks'
 require 'bootstrap-sass'
 require 'can_can_dry'
