@@ -17,8 +17,8 @@
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 begin
   ActiveRecord::Migration.maintain_test_schema!
-rescue ActiveRecord::PendingMigrationError => ex
-  ::Rails.logger.fatal(ex)
+rescue ActiveRecord::PendingMigrationError => e
+  ::Rails.logger.fatal(e)
   ::Kernel.exit 1
 end
 
