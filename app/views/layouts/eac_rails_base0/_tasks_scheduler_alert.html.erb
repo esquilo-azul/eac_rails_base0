@@ -1,0 +1,10 @@
+<% if can_by_path?(main_app.tasks_scheduler_daemon_path) &&
+    can_by_path?(main_app.status_tasks_scheduler_daemon_path) %>
+<script>
+  TasksScheduler.Alert.init();
+</script>
+<span id="tasks_scheduler_alert" >
+  <%= link_to '', main_app.tasks_scheduler_daemon_path, class: 'daemon_alert' %>
+  <%= link_to '', main_app.status_scheduled_tasks_path, class: 'task_alert' %>
+</span>
+<% end %>

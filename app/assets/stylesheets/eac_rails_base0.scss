@@ -17,3 +17,7 @@
 .alert-alert {
   @extend .alert-warning;
 }
+
+.tasks_scheduler_alert_link {
+  @extend .navbar-brand;
+}
