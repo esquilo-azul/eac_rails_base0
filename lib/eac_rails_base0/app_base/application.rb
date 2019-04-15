@@ -6,6 +6,15 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+def rails_root(dir)
+  return dir if ::File.exist?(::File.join(dir, 'config.ru'))
+  raise 'config.ru not found in ascendent path' if dir == '/'
+  rails_root(::File.dirname(dir))
+end
+
+local_configuration = ::File.join(rails_root(APP_PATH), 'config', 'local_configuration.rb')
+require local_configuration if File.exist?(local_configuration)
+
 module EacRailsBase0App
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
@@ -32,6 +41,3 @@ module EacRailsBase0App
     end
   end
 end
-
-local_configuration = ::File.join(APP_PATH, 'config', 'local_configuration.rb')
-require local_configuration if File.exist?(local_configuration)
