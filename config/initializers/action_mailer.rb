@@ -9,10 +9,13 @@ Rails.application.configure do
     authentication: ENV['action_mailer_smtp_authentication'],
     enable_starttls_auto: BooleanValue.to_b(ENV['action_mailer_smtp_enable_starttls_auto'])
   }
-  config.action_mailer.default_url_options = {
-    host: ENV['action_mailer_default_url_host'],
-    port: ENV['action_mailer_default_url_port']
-  }
+  %i(host port).each do |option|
+    value = ENV["action_mailer_default_url_#{option}"]
+    if value.present?
+      config.action_mailer.default_url_options ||= {}
+      config.action_mailer.default_url_options[option] = value
+    end
+  end
   config.action_mailer.default_options ||= {}
   config.action_mailer.default_options[:from] = ENV['action_mailer_default_options_from']
   config.action_mailer.default_options[:reply_to] = ENV['action_mailer_default_options_reply_to']
