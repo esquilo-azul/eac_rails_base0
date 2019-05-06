@@ -1,0 +1,16 @@
+@import 'eac_rails_base0/default_configuration';
+
+.default_link {
+  text-decoration: none;
+
+  #hover {
+    text-decoration: none;
+  }
+}
+
+.edit_link {
+  @extend .glyphicon;
+  @extend .glyphicon-pencil;
+  @extend .default_link;
+  color: $edit_icon_color;
+}
