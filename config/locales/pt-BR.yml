@@ -2,10 +2,12 @@ pt-BR:
   date:
     formats:
       default: '%d/%m/%Y'
+      picker: '%d/%m/%Y'
       short: '%d/%m/%y'
   time:
     formats:
       default: "%d/%m/%Y %H:%M"
+      picker: '%d/%m/%Y %H:%M'
       short: '%d/%m/%y %H:%M'
   eac_rails_base0:
     links:
