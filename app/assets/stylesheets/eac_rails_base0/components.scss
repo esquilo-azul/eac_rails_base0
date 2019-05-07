@@ -8,6 +8,13 @@
   }
 }
 
+.delete_link {
+  @extend .glyphicon;
+  @extend .glyphicon-remove;
+  @extend .default_link;
+  color: $delete_icon_color;
+}
+
 .edit_link {
   @extend .glyphicon;
   @extend .glyphicon-pencil;

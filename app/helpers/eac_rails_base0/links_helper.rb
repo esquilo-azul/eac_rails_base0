@@ -1,6 +1,17 @@
 # frozen_string_literal: true
 module EacRailsBase0
   module LinksHelper
+    def short_delete_link(object)
+      value_or_sign(object, '') do |value|
+        link_to '', object_path(value),
+                class: 'delete_link', method: :delete, target: '_blank',
+                title: ::I18n.t('eac_rails_base0.links.delete_object', label: value.to_s),
+                data: {
+                  confirm: ::I18n.t('eac_rails_base0.links.delete_confirm', label: value.to_s)
+                }
+      end
+    end
+
     def short_edit_link(object)
       value_or_sign(object, '') do |value|
         link_to '', object_path(value, 'edit'),
