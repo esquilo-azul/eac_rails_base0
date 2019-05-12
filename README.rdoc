@@ -10,8 +10,6 @@ A common base for Rails projects developed by {Esquilo Azul Company}[https://git
 />}[https://codeclimate.com/github/esquilo-azul/eac_rails_base0/maintainability]
 {<img src="https://api.codeclimate.com/v1/badges/268ee9c414fbad3a650e/test_coverage"
 />}[https://codeclimate.com/github/esquilo-azul/eac_rails_base0/test_coverage]
-{<img src="https://beta.gemnasium.com/badges/github.com/esquilo-azul/can_can_dry.svg"
-alt="Dependency Status" />}[https://beta.gemnasium.com/projects/github.com/esquilo-azul/can_can_dry]
 {<img src="http://inch-ci.org/github/esquilo-azul/eac_rails_base0.svg?branch=master" alt="Inline docs" />
 }[http://inch-ci.org/github/esquilo-azul/eac_rails_base0]
 
