@@ -14,3 +14,17 @@ A Rails base for multiple Rails projects developed by Esquilo Azul Company.
 alt="Dependency Status" />}[https://beta.gemnasium.com/projects/github.com/esquilo-azul/can_can_dry]
 {<img src="http://inch-ci.org/github/esquilo-azul/eac_rails_base0.svg?branch=master" alt="Inline docs" />
 }[http://inch-ci.org/github/esquilo-azul/eac_rails_base0]
+
+== Installation
+
+Add this to your Gemfile:
+
+    gem 'eac_rails_base0'
+
+Run:
+
+    bundle install
+
+And:
+
+    rails generator eac_rails_base0
