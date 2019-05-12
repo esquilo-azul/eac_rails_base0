@@ -10,6 +10,7 @@ pt-BR:
   eac_rails_base0:
     links:
       edit_object: Editar "%{label}".
+      goto_url: Ir para %{url}.
     main_menu:
       admin:
         aranha: Aranha

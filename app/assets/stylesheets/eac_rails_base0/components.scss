@@ -14,3 +14,10 @@
   @extend .default_link;
   color: $edit_icon_color;
 }
+
+.goto_link {
+  @extend .glyphicon;
+  @extend .glyphicon-share;
+  @extend .default_link;
+  color: $goto_icon_color;
+}
