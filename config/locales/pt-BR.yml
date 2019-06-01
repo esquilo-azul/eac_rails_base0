@@ -15,6 +15,7 @@ pt-BR:
       delete_object: Remover "%{label}".
       edit_object: Editar "%{label}".
       goto_url: Ir para %{url}.
+      show_object: Mostrar "%{label}".
     main_menu:
       admin:
         aranha: Aranha
