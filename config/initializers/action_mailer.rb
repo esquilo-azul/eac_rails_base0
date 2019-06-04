@@ -7,7 +7,8 @@ Rails.application.configure do
     user_name: ENV['action_mailer_smtp_username'],
     password: ENV['action_mailer_smtp_password'],
     authentication: ENV['action_mailer_smtp_authentication'],
-    enable_starttls_auto: BooleanValue.to_b(ENV['action_mailer_smtp_enable_starttls_auto'])
+    enable_starttls_auto:
+      ::EacRailsBase0::BooleanValue.to_b(ENV['action_mailer_smtp_enable_starttls_auto'])
   }
   %i(host port).each do |option|
     value = ENV["action_mailer_default_url_#{option}"]
