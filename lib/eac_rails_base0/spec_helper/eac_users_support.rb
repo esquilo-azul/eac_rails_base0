@@ -12,8 +12,8 @@ end
 
 FactoryBot.define do
   factory :user, class: ::EacUsersSupport::User do
-    email 'admin@example.com'
-    password 'mysecret'
+    email { 'admin@example.com' }
+    password { 'mysecret' }
   end
 end
 
