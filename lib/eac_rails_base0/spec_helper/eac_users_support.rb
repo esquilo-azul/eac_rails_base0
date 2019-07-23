@@ -32,3 +32,13 @@ RSpec.shared_context 'when user is admin', shared_context: :metadata do
     expect(::EacUsersSupport::User.current_user).not_to be_nil
   end
 end
+
+RSpec.shared_context 'when user is anonymous', shared_context: :metadata do
+  before do
+    click_link('Sair') if ::EacUsersSupport::User.current_user.present?
+  end
+
+  it 'user should be not logged' do
+    expect(::EacUsersSupport::User.current_user).to be_nil
+  end
+end
