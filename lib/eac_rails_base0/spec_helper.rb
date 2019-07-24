@@ -133,3 +133,4 @@ end
 require 'eac_rails_base0/spec_helper/capybara'
 require 'eac_rails_base0/spec_helper/factory_bot'
 require 'eac_rails_base0/spec_helper/eac_users_support'
+require 'aranha/parsers/spec/source_target_fixtures_example'
