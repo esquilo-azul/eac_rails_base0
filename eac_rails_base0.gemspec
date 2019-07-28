@@ -30,6 +30,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'eac_rails_utils', '~> 0.4'
   s.add_dependency 'eac_users_support', '~> 0.3', '>= 0.3.4'
   s.add_dependency 'factory_bot_rails', '~> 4.0' # Test
+  s.add_dependency 'fog-aws', '~> 3.5', '>= 3.5.2'
   s.add_dependency 'jbuilder', '~> 2.0'
   s.add_dependency 'jquery-rails'
   s.add_dependency 'jquery-ui-rails'
