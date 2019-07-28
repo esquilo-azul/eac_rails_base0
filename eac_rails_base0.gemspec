@@ -25,6 +25,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'byebug' # Development
   s.add_dependency 'can_can_dry', '~> 0.2'
   s.add_dependency 'capybara' # Test
+  s.add_dependency 'carrierwave', '~> 1.3', '>= 1.3.1'
   s.add_dependency 'coffee-rails', '~> 4.1.0'
   s.add_dependency 'eac_rails_utils', '~> 0.4'
   s.add_dependency 'eac_users_support', '~> 0.3', '>= 0.3.4'
