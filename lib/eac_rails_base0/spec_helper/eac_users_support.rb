@@ -35,10 +35,22 @@ end
 
 RSpec.shared_context 'when user is anonymous', shared_context: :metadata do
   before do
-    click_link('Sair') if ::EacUsersSupport::User.current_user.present?
+    visit '/'
+    if link_exist?('Sair')
+      click_link('Sair')
+    elsif !link_exist?('Entrar')
+      raise 'login nor logout link found'
+    end
   end
 
   it 'user should be not logged' do
     expect(::EacUsersSupport::User.current_user).to be_nil
+  end
+
+  def link_exist?(locator)
+    find_link(locator)
+    true
+  rescue Capybara::ElementNotFound
+    false
   end
 end
