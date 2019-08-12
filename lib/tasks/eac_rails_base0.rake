@@ -9,4 +9,9 @@ namespace :eac_rails_base0 do
     t.rspec_opts = "--pattern '**/spec/**/*_spec.rb'"
   end
   Rake::Task['eac_rails_base0:rspec'].enhance ['db:test:prepare']
+
+  desc 'Minitest for engines'
+  Rails::TestTask.new('minitest:engines' => 'test:prepare') do |t|
+    t.pattern = 'engines/*/test/**/*_test.rb'
+  end
 end
