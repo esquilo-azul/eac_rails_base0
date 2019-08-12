@@ -14,4 +14,7 @@ namespace :eac_rails_base0 do
   Rails::TestTask.new('minitest:engines' => 'test:prepare') do |t|
     t.pattern = 'engines/*/test/**/*_test.rb'
   end
+
+  desc 'Minitest for application'
+  task minitest: %w(test:run eac_rails_base0:minitest:engines)
 end
