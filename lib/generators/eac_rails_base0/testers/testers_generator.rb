@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module EacRailsBase0
-  class RspecGenerator < Rails::Generators::Base
+  class TestersGenerator < Rails::Generators::Base
     source_root File.expand_path('templates', __dir__)
 
     def create_initializer_files
