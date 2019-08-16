@@ -17,4 +17,7 @@ namespace :eac_rails_base0 do
 
   desc 'Minitest for application'
   task minitest: %w(test:run eac_rails_base0:minitest:engines)
+
+  desc 'Minitest and RSpec for application'
+  task test: ['test', 'eac_rails_base0:rspec']
 end
