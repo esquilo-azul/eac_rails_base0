@@ -1,0 +1,9 @@
+# frozen_string_literal: true
+
+if %w(test rspec).any? { |arg| ARGV.first.to_s.include?(arg) }
+  ENV['RACK_ENV'] = ENV['RAILS_ENV'] = 'test'
+end
+
+require File.expand_path('../config/application', __FILE__)
+
+Rails.application.load_tasks
