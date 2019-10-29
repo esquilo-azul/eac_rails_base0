@@ -6,6 +6,7 @@ module EacRailsBase0
       include CanCan::Ability
 
       def initialize(user)
+        as_action_aliases
         user ||= ::EacUsersSupport::User.new
         devise_rules(user)
         administrator_rules(user)
