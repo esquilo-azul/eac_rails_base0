@@ -4,6 +4,7 @@ module EacRailsBase0
   module AppBase
     class AbilityMapping
       include CanCanDry::AbilityMapping
+      include CanCanDry::AbilityMappingSets::ActiveScaffold
       include CanCanDry::AbilityMappingSets::Devise
 
       def initialize
