@@ -1,0 +1,10 @@
+<%
+ogp_set({
+    url: request.original_url,
+    site_name: base0_app_title
+  })
+%>
+<% if ::I18n.locale.present? %>
+  <% ogp_set(locale: ::I18n.locale.to_s.gsub('-', '_')) %>
+<% end %>
+<%= ogp_meta_tags %>
