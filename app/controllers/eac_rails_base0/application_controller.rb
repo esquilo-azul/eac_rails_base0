@@ -6,6 +6,7 @@ module EacRailsBase0
 
     layout 'eac_rails_base0/application'
     helper ::EacRailsBase0::LayoutHelper
+    helper ::EacRailsUtils::FormatterHelper
     helper ::EacRailsUtils::LinksHelper
     helper ::EacRailsUtils::OpenGraphProtocolHelper
 
