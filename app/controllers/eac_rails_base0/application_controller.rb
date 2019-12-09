@@ -5,8 +5,8 @@ module EacRailsBase0
     include ::CanCanDry::ControllerAuthorization
 
     layout 'eac_rails_base0/application'
-    helper ::EacRailsBase0::LinksHelper
     helper ::EacRailsBase0::LayoutHelper
+    helper ::EacRailsUtils::LinksHelper
     helper ::EacRailsUtils::OpenGraphProtocolHelper
 
     # Prevent CSRF attacks by raising an exception.
