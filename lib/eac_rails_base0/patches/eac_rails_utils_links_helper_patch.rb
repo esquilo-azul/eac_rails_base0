@@ -13,7 +13,6 @@ module EacRailsBase0
 
       module InstanceMethods
         def short_object_link_with_base0(object, action = nil, options = {})
-          return '' unless ::Rails.const_defined? 'Server'
           value_or_sign(object, '') do |value|
             path = object_path(value, action)
             if can_by_path?(path, options[:method])
