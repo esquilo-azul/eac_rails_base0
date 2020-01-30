@@ -29,7 +29,7 @@ module EacRailsBase0
   end
 end
 
-require_dependency 'eac_rails_utils/links_helper'
+require 'eac_rails_utils/links_helper'
 patch = ::EacRailsBase0::Patches::EacRailsUtilsLinksHelper
 target = ::EacRailsUtils::LinksHelper
 target.send(:include, patch) unless target.included_modules.include?(patch)
