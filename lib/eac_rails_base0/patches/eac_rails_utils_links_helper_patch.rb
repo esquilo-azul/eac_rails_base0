@@ -15,9 +15,7 @@ module EacRailsBase0
         def short_object_link_with_base0(object, action = nil, options = {})
           value_or_sign(object, '') do |value|
             path = object_path(value, action)
-            if can_by_path?(path, options[:method])
-              link_to '', url_for(path), options
-            end
+            link_to '', url_for(path), options if can_by_path?(path, options[:method])
           end
         end
 

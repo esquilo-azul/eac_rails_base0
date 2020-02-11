@@ -9,6 +9,7 @@ Bundler.require(*Rails.groups)
 def rails_root(dir)
   return dir if ::File.exist?(::File.join(dir, 'config.ru'))
   raise 'config.ru not found in ascendent path' if dir == '/'
+
   rails_root(::File.dirname(dir))
 end
 

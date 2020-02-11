@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 # File: lib/pg/deprecated_constants.rb
 #
 # This file overrides the pg gem's pg/deprecated_constants.rb file and so
@@ -16,16 +17,16 @@
 #
 # config.autoload_paths << Rails.root.join('lib')
 #
-if ('0.21.0' != PG::VERSION) || (ActiveRecord.version.to_s != '4.2.11.1')
-  puts <<MSG
------------------------------------------------------------------------------------
-The pg and/or activerecord gem version has changed, meaning deprecated pg constants
-may no longer be in use, so try deleting this file to see if the
-'The PGconn, PGresult, and PGError constants are deprecated...' message has gone:
-#{__FILE__}
------------------------------------------------------------------------------------
+if (PG::VERSION != '0.21.0') || (ActiveRecord.version.to_s != '4.2.11.1')
+  ::Rails.logger.warn(<<~MSG)
+    -----------------------------------------------------------------------------------
+    The pg and/or activerecord gem version has changed, meaning deprecated pg constants
+    may no longer be in use, so try deleting this file to see if the
+    'The PGconn, PGresult, and PGError constants are deprecated...' message has gone:
+    #{__FILE__}
+    -----------------------------------------------------------------------------------
 
-MSG
+  MSG
 end
 
 # Declare the deprecated constants as is done in the original
