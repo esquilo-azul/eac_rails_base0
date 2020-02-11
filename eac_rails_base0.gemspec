@@ -40,6 +40,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'rspec-rails', '~> 3.7' # Test
   s.add_dependency 'rubocop', '~> 0.80' # Development
   s.add_dependency 'rubocop-rails', '~> 2.4', '>= 2.4.2' # Development
+  s.add_dependency 'rubocop-rspec', '~> 1.38', '>= 1.38.1'
   s.add_dependency 'sass-rails', '~> 5.0'
   s.add_dependency 'spring' # Development
   s.add_dependency 'tasks_scheduler', '~> 0.2', '>= 0.2.3'
