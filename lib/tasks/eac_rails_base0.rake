@@ -21,7 +21,15 @@ namespace :eac_rails_base0 do
 
   desc 'Minitest and RSpec for application'
   task test: ['test', 'eac_rails_base0:rspec']
+
+  namespace :gems do
+    desc 'Minitest and RSpec for application and local gems'
+    task test_all: :environment do
+      require 'eac_ruby_utils/gem/test_all'
+      ::EacRubyUtils::Gem::TestAll.new(::EacRailsBase0::Gems.all)
+    end
+  end
 end
 
 Rake::Task['default'].clear
-task default: %w(test eac_rails_base0:rspec)
+task default: %w(eac_rails_base0:gems:test_all)
