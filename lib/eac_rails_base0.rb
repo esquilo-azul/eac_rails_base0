@@ -17,6 +17,7 @@ require 'rails-i18n'
 module EacRailsBase0
 end
 
+require_dependency 'eac_rails_base0/gems'
 require_dependency 'eac_rails_base0/app_base/ability_mapping'
 require_dependency 'eac_rails_base0/app_base/ability'
 require_dependency 'eac_rails_base0/boolean_value'
