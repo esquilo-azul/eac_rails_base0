@@ -35,3 +35,6 @@ end
 
 Rake::Task['default'].clear
 task default: %w[eac_rails_base0:gems:test_all]
+
+Rake::Task['test'].clear
+task test: %w[eac_rails_base0:minitest]
