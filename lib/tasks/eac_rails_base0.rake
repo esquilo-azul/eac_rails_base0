@@ -26,7 +26,8 @@ namespace :eac_rails_base0 do
     desc 'Minitest and RSpec for application and local gems'
     task test_all: :environment do
       require 'eac_ruby_gems_utils/tests/multiple'
-      ::EacRubyGemsUtils::Tests::Multiple.new(::EacRailsBase0::Gems.all)
+      tests = ::EacRubyGemsUtils::Tests::Multiple.new(::EacRailsBase0::Gems.all)
+      fail 'Some test did not pass' unless tests.ok?
     end
   end
 end
