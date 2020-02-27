@@ -25,8 +25,8 @@ namespace :eac_rails_base0 do
   namespace :gems do
     desc 'Minitest and RSpec for application and local gems'
     task test_all: :environment do
-      require 'eac_ruby_utils/gem/test_all'
-      ::EacRubyUtils::Gem::TestAll.new(::EacRailsBase0::Gems.all)
+      require 'eac_ruby_gems_utils/tests/multiple'
+      ::EacRubyGemsUtils::Tests::Multiple.new(::EacRailsBase0::Gems.all)
     end
   end
 end
