@@ -1,5 +1,5 @@
 # frozen_string_literal: true
-require 'eac_ruby_utils/gem'
+require 'eac_ruby_gems_utils/gem'
 
 module EacRailsBase0
   module Gems
@@ -13,7 +13,7 @@ module EacRailsBase0
       private
 
       def app_uncached
-        ::EacRubyUtils::Gem.new(::Rails.root)
+        ::EacRubyGemsUtils::Gem.new(::Rails.root)
       end
 
       def all_uncached
@@ -23,7 +23,7 @@ module EacRailsBase0
       def vendor_gems_uncached
         r = []
         vendor_gems_root.each_child.each do |child|
-          r << ::EacRubyUtils::Gem.new(child) if child.directory?
+          r << ::EacRubyGemsUtils::Gem.new(child) if child.directory?
         end
         r
       end
