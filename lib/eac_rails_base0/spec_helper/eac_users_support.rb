@@ -14,6 +14,7 @@ FactoryBot.define do
   factory :user, class: ::EacUsersSupport::User do
     email { 'admin@example.com' }
     password { 'mysecret' }
+    confirmed_at { ::Time.zone.now }
   end
 end
 
