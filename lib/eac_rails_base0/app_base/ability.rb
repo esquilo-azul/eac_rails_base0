@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'active_scaffold/bridges/cancan/cancan_bridge'
+
 module EacRailsBase0
   module AppBase
     class Ability
