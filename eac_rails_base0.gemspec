@@ -29,7 +29,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'coffee-rails', '~> 4.1.0'
   s.add_dependency 'eac_rails_utils', '~> 0.10'
   s.add_dependency 'eac_ruby_gem_support', '~> 0.1'
-  s.add_dependency 'eac_ruby_gems_utils', '~> 0.2'
+  s.add_dependency 'eac_ruby_gems_utils', '~> 0.4'
   s.add_dependency 'eac_ruby_utils', '~> 0.19'
   s.add_dependency 'eac_users_support', '~> 0.4'
   s.add_dependency 'factory_bot_rails', '~> 4.0' # Test
