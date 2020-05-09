@@ -14,13 +14,19 @@ module EacRailsBase0
         administrator_rules(user)
       end
 
+      def devise_password_rules(user)
+        return unless user.new_record?
+
+        can :manage, 'Devise::Password'
+      end
+
       def devise_session_rules(user)
         can :destroy, 'Devise::Session' unless user.new_record?
         can :create, 'Devise::Session'
       end
 
       def devise_rules(user)
-        %w[session].each do |devise_module|
+        %w[password session].each do |devise_module|
           send("devise_#{devise_module}_rules", user)
         end
       end
