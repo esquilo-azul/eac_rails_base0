@@ -6,6 +6,7 @@ module EacRailsBase0
       class << self
         def included(base)
           base.include(InstanceMethods)
+          base.include(::CanCanDryHelper)
           base.alias_method_chain :short_object_link, :base0
           base.alias_method_chain :object_path_by_class, :base0
         end
