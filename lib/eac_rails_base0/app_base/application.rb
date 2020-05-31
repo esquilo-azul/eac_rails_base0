@@ -40,5 +40,15 @@ module EacRailsBase0App
     config.after_initialize do
       ActiveRecord::Base.logger = nil
     end
+
+    app_tmpdir = ::File.join(::Dir.tmpdir, ::Rails.root.to_path.parameterize, 'tmp')
+
+    config.assets.configure do |env|
+      env.cache = Sprockets::Cache::FileStore.new(
+        ::File.join(app_tmpdir, 'cache', 'assets'),
+        config.assets.cache_limit,
+        env.logger
+      )
+    end
   end
 end
