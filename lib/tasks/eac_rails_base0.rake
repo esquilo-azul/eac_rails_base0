@@ -22,15 +22,6 @@ namespace :eac_rails_base0 do
 
   desc 'Minitest and RSpec for application'
   task test: ['test', 'eac_rails_base0:rspec']
-
-  namespace :gems do
-    desc 'Minitest and RSpec for application and local gems'
-    task test_all: :environment do
-      require 'eac_ruby_gems_utils/tests/multiple'
-      tests = ::EacRubyGemsUtils::Tests::Multiple.new(::EacRailsBase0::Gems.all)
-      raise 'Some test did not pass' unless tests.ok?
-    end
-  end
 end
 
 Rake::Task['default'].clear
