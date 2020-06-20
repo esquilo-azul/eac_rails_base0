@@ -50,5 +50,8 @@ module EacRailsBase0App
         env.logger
       )
     end
+
+    migrate_deprecated_dir = ::Rails.root.join('db', 'migrate_deprecated')
+    config.paths['db/migrate'] << migrate_deprecated_dir if migrate_deprecated_dir.directory?
   end
 end
