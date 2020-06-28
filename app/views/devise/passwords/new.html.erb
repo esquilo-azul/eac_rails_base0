@@ -1,0 +1,7 @@
+<%= panel_default t('devise.forgot_password') do %>
+  <%= common_form(resource, as: resource_name, url: password_path(resource_name),
+    submit_label: t('devise.forgot_password_submit'),
+    html: { method: :post }) do |f| %>
+    <%= f.email_field :email, class: 'form-control' %>
+  <% end %>
+<% end %>

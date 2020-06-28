@@ -8,6 +8,7 @@ pt-BR:
     confirmation_resend: Reenvio de instruções de confirmação
     confirmation_resend_submit: Reenviar
     forgot_password: Esqueceu sua senha?
+    forgot_password_submit: Envie-me as instruções de recuperação de senha
     log_in: Entrar
     log_in_with: Entrar com %{provider}
     log_out: Sair
