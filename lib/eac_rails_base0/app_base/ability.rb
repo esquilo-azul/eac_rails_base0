@@ -26,13 +26,18 @@ module EacRailsBase0
         can :manage, 'Devise::Password'
       end
 
+      def devise_registration_rules(user)
+        can :create, 'Devise::Registration' if user.new_record?
+        can :update, 'Devise::Registration' unless user.new_record?
+      end
+
       def devise_session_rules(user)
         can :destroy, 'Devise::Session' unless user.new_record?
         can :create, 'Devise::Session'
       end
 
       def devise_rules(user)
-        %w[confirmation password session].each do |devise_module|
+        %w[confirmation password registration session].each do |devise_module|
           send("devise_#{devise_module}_rules", user)
         end
       end
