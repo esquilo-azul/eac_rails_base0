@@ -6,9 +6,11 @@ module EacRailsBase0
       include CanCanDry::AbilityMapping
       include CanCanDry::AbilityMappingSets::ActiveScaffold
       include CanCanDry::AbilityMappingSets::Devise
+      include CanCanDry::AbilityMappingSets::DeviseInvitable
 
       def initialize
         map_devise
+        map_devise_invitable
         map_controller 'EacUsersSupport::Admin::Users', :manage, ::EacUsersSupport::User
         map_controller 'Aranha::Addresses', :manage, ::Aranha::Address
         map_controller 'BrRailties::FederalUnits', :manage, ::BrRailties::FederalUnit
