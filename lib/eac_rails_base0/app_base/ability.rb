@@ -14,6 +14,12 @@ module EacRailsBase0
         administrator_rules(user)
       end
 
+      def devise_confirmation_rules(user)
+        return unless user.new_record?
+
+        can :create, 'Devise::Confirmation'
+      end
+
       def devise_password_rules(user)
         return unless user.new_record?
 
@@ -26,7 +32,7 @@ module EacRailsBase0
       end
 
       def devise_rules(user)
-        %w[password session].each do |devise_module|
+        %w[confirmation password session].each do |devise_module|
           send("devise_#{devise_module}_rules", user)
         end
       end
