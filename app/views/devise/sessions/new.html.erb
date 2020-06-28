@@ -1,0 +1,9 @@
+<%= panel_default t('devise.log_in') do %>
+  <%= common_form(resource, as: resource_name, url: session_path(resource_name),
+    :submit_label => t('devise.log_in')) do |f| %>
+    <%= f.email_field :email, required: true %>
+    <%= f.password_field :password, required: true %>
+    <%= f.check_box_field :remember_me %>
+  <% end %>
+  <%= render "devise/shared/links" %>
+<% end %>
