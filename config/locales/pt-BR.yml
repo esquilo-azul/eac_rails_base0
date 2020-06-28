@@ -5,6 +5,8 @@ pt-BR:
       picker: '%d/%m/%Y'
       short: '%d/%m/%y'
   devise:
+    confirmation_resend: Reenvio de instruções de confirmação
+    confirmation_resend_submit: Reenviar
     forgot_password: Esqueceu sua senha?
     log_in: Entrar
     log_in_with: Entrar com %{provider}

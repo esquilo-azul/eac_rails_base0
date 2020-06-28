@@ -1,0 +1,11 @@
+<!--
+f.email_field :email, autofocus: true, autocomplete: "email",
+value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email)
+-->
+<%= panel_default t('devise.confirmation_resend') do %>
+  <%= common_form(resource, as: resource_name, url: confirmation_path(resource_name),
+    html: { method: :post }, :submit_label => t('devise.confirmation_resend_submit')) do |f| %>
+    <%= f.email_field :email, required: true %>
+  <% end %>
+  <%= render "devise/shared/links" %>
+<% end %>
