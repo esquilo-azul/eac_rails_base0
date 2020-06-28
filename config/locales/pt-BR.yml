@@ -11,9 +11,12 @@ pt-BR:
     log_in: Entrar
     log_in_with: Entrar com %{provider}
     log_out: Sair
+    new_password: Nova senha
     sign_up: Cadastrar-se
     unreceived_confirmation: Não recebeu as instruções de confirmação?
     unreceived_unlock: Não recebeu as instruções de desbloqueio de conta?
+    update_password: Alteração de senha
+    update_password_submit: Alterar minha senha
   time:
     formats:
       default: "%d/%m/%Y %H:%M"

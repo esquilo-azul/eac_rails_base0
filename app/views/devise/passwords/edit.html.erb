@@ -1,0 +1,10 @@
+<%= panel_default t('devise.update_password') do %>
+  <%= common_form(resource, as: resource_name,
+    url: password_path(resource_name), submit_label: t('devise.update_password_submit'),
+    html: { method: :put }
+  ) do |f| %>
+    <%= f.hidden_field :reset_password_token %>
+    <%= f.password_field :password, label: t('devise.new_password'), required: true %>
+    <%= f.password_field :password_confirmation, required: true %>
+  <% end %>
+<% end %>
