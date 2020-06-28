@@ -14,6 +14,7 @@ pt-BR:
     log_out: Sair
     new_password: Nova senha
     sign_up: Cadastrar-se
+    sign_up_submit: Cadastrar
     unreceived_confirmation: Não recebeu as instruções de confirmação?
     unreceived_unlock: Não recebeu as instruções de desbloqueio de conta?
     update_password: Alteração de senha
