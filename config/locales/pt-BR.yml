@@ -10,12 +10,6 @@ pt-BR:
       picker: '%d/%m/%Y %H:%M'
       short: '%d/%m/%y %H:%M'
   eac_rails_base0:
-    links:
-      delete_confirm: Confirma a remoção de "%{label}"?
-      delete_object: Remover "%{label}".
-      edit_object: Editar "%{label}".
-      goto_url: Ir para %{url}.
-      show_object: Mostrar "%{label}".
     main_menu:
       admin:
         aranha: Aranha
