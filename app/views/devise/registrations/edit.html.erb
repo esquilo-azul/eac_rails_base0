@@ -1,0 +1,9 @@
+<%= panel_default t('devise.update_password') do %>
+  <%= common_form(resource, as: resource_name, url: registration_path(resource_name),
+    submit_label: t('devise.update_password_submit'), html: { method: :put, role: "form" }) do |f| %>
+    <p>Preencha os campos abaixo se deseja alterar sua senha.</p>
+    <%= f.password_field :current_password, label: 'Senha atual', required: true %>
+    <%= f.password_field :password, label: 'Nova senha', required: false %>
+    <%= f.password_field :password_confirmation, label: 'Confirmação de senha' %>
+  <% end %>
+<% end %>
