@@ -20,6 +20,16 @@ module EacRailsBase0
         can :create, 'Devise::Confirmation'
       end
 
+      def devise_invitable_rules(user)
+        can :create, 'Devise::Invitation' if user.administrator?
+        can :update, 'Devise::Invitation'
+        if user.new_record?
+          can :create, 'DeviseInvitable::Registration'
+        else
+          can :update, 'DeviseInvitable::Registration'
+        end
+      end
+
       def devise_password_rules(user)
         return unless user.new_record?
 
@@ -37,7 +47,7 @@ module EacRailsBase0
       end
 
       def devise_rules(user)
-        %w[confirmation password registration session].each do |devise_module|
+        %w[confirmation invitable password registration session].each do |devise_module|
           send("devise_#{devise_module}_rules", user)
         end
       end
