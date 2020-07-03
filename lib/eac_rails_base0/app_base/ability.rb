@@ -18,6 +18,7 @@ module EacRailsBase0
         return unless user.new_record?
 
         can :create, 'Devise::Confirmation'
+        can :read, 'Devise::Confirmation'
       end
 
       def devise_invitable_rules(user)
