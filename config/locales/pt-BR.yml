@@ -25,6 +25,8 @@ pt-BR:
       picker: '%d/%m/%Y %H:%M'
       short: '%d/%m/%y %H:%M'
   eac_rails_base0:
+    app_version:
+      unsetted: Não especificada
     main_menu:
       admin:
         aranha: Aranha
