@@ -23,9 +23,11 @@ RSpec.shared_context 'when user is admin', shared_context: :metadata do
 
   before do
     visit '/users/sign_in'
-    fill_in 'E-mail', with: user.email
-    fill_in 'Password', with: user.password
-    click_on 'Log in'
+    fill_in ::I18n.translate!('activerecord.attributes.eac_users_support/user.email'),
+            with: user.email
+    fill_in ::I18n.translate!('activerecord.attributes.eac_users_support/user.password'),
+            with: user.password
+    click_button ::I18n.translate!('devise.log_in')
   end
 
   it 'user should be logged' do
@@ -37,9 +39,9 @@ end
 RSpec.shared_context 'when user is anonymous', shared_context: :metadata do
   before do
     visit '/'
-    if link_exist?('Sair')
-      click_link('Sair')
-    elsif !link_exist?('Entrar')
+    if link_exist?(::I18n.translate!('devise.log_out'))
+      click_link(::I18n.translate!('devise.log_out'))
+    elsif !link_exist?(::I18n.translate!('devise.log_in'))
       raise 'login nor logout link found'
     end
   end
