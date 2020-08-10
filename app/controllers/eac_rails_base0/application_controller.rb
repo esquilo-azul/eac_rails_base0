@@ -23,6 +23,7 @@ module EacRailsBase0
         redirect_to main_app.root_url
       else
         flash[:danger] = 'Por favor faça o login.'
+        store_location_for(::EacUsersSupport::User, request.fullpath)
         redirect_to eac_users_support.new_user_session_path
       end
     end
@@ -33,6 +34,10 @@ module EacRailsBase0
 
         super
       end
+    end
+
+    def after_sign_in_path_for(resource)
+      stored_location_for(resource) || root_path
     end
   end
 end
