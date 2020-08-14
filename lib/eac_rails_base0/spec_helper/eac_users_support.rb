@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'devise'
+require_relative 'factory_bot'
 
 RSpec.configure do |config|
   config.include Warden::Test::Helpers
