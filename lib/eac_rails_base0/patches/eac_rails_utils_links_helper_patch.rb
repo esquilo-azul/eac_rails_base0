@@ -5,23 +5,21 @@ module EacRailsBase0
     module EacRailsUtilsLinksHelper
       class << self
         def included(base)
-          base.include(InstanceMethods)
-          base.include(::CanCanDryHelper)
-          base.alias_method_chain :short_object_link, :base0
-          base.alias_method_chain :object_path_by_class, :base0
+          base.prepend(InstanceMethods)
+          base.prepend(::CanCanDryHelper)
         end
       end
 
       module InstanceMethods
-        def short_object_link_with_base0(object, action = nil, options = {})
+        def short_object_link(object, action = nil, options = {})
           value_or_sign(object, '') do |value|
             path = object_path(value, action)
             link_to '', url_for(path), options if can_by_path?(path, options[:method])
           end
         end
 
-        def object_path_by_class_with_base0(*args)
-          object_path_by_class_without_base0(*args).gsub(/_url\z/, '_path')
+        def object_path_by_class(*args)
+          super(*args).gsub(/_url\z/, '_path')
         end
       end
     end
@@ -31,4 +29,4 @@ end
 require 'eac_rails_utils/links_helper'
 patch = ::EacRailsBase0::Patches::EacRailsUtilsLinksHelper
 target = ::EacRailsUtils::LinksHelper
-target.send(:include, patch) unless target.included_modules.include?(patch)
+target.prepend(patch) unless target.included_modules.include?(patch)
