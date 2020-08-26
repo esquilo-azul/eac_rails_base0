@@ -40,7 +40,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'jquery-ui-rails'
   s.add_dependency 'launchy'
   s.add_dependency 'puma'
-  s.add_dependency 'rails', '~> 4.2.11', '>= 4.2.11.1'
+  s.add_dependency 'rails', '>= 4.2.11.3'
   s.add_dependency 'rails-i18n', '~> 4.0'
   s.add_dependency 'recordselect', '>= 3.10.1'
   s.add_dependency 'rspec-rails', '~> 3.7' # Test
