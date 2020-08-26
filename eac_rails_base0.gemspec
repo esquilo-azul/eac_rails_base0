@@ -27,7 +27,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'can_can_dry', '~> 0.5'
   s.add_dependency 'capybara' # Test
   s.add_dependency 'carrierwave', '~> 1.3', '>= 1.3.1'
-  s.add_dependency 'coffee-rails', '~> 4.1.0'
+  s.add_dependency 'coffee-rails', '>= 4.2.2'
   s.add_dependency 'eac_rails_utils', '~> 0.10'
   s.add_dependency 'eac_ruby_gem_support', '~> 0.1', '>= 0.1.1'
   s.add_dependency 'eac_ruby_gems_utils', '~> 0.6', '>= 0.6.3'
