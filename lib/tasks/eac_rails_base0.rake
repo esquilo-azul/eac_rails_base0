@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require 'rake/testtask'
 require 'rspec/core/rake_task'
 
 namespace :eac_rails_base0 do
@@ -13,7 +14,7 @@ namespace :eac_rails_base0 do
   Rake::Task['eac_rails_base0:rspec'].enhance ['db:test:prepare']
 
   desc 'Minitest for engines'
-  Rails::TestTask.new('minitest:engines' => 'test:prepare') do |t|
+  ::Rake::TestTask.new('minitest:engines' => 'test:prepare') do |t|
     t.pattern = 'engines/*/test/**/*_test.rb'
   end
 
