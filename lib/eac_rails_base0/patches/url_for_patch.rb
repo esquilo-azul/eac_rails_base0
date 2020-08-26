@@ -5,14 +5,13 @@ module EacRailsBase0
     module UrlForPatch
       class << self
         def included(base)
-          base.include(InstanceMethods)
-          base.alias_method_chain :url_for, :engines
+          base.prepend(InstanceMethods)
         end
       end
 
       module InstanceMethods
-        def url_for_with_engines(options = nil)
-          url_for_without_engines(options)
+        def url_for(options = nil)
+          super(options)
         rescue ActionController::UrlGenerationError
           engines_url_for(options)
         end
@@ -39,4 +38,4 @@ end
 
 patch = ::EacRailsBase0::Patches::UrlForPatch
 target = ::ActionDispatch::Routing::UrlFor
-target.send(:include, patch) unless target.included_modules.include?(patch)
+target.prepend(patch) unless target.included_modules.include?(patch)
