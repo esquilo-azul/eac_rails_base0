@@ -32,10 +32,11 @@ module EacRailsBase0App
     config.i18n.default_locale = :'pt-BR'
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
-    config.active_record.raise_in_transactional_callbacks = true
+    config.active_record.raise_in_transactional_callbacks = true if ::Rails.version < '5'
 
     # Autoload do código em /lib.
     config.autoload_paths << Rails.root.join('lib')
+    config.eager_load_paths << ::Rails.root.join('lib')
 
     config.after_initialize do
       ActiveRecord::Base.logger = nil
