@@ -61,3 +61,5 @@ module EacRailsBase0App
     end
   end
 end
+
+require 'carrierwave'
