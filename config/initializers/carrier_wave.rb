@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'carrierwave'
+require 'carrierwave/orm/activerecord'
 require 'fog/aws'
 
 if ENV['carrierwave_provider'] == 'AWS'
