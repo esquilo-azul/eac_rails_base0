@@ -36,7 +36,6 @@ module EacRailsBase0App
 
     # Autoload do código em /lib.
     config.autoload_paths << Rails.root.join('lib')
-    config.eager_load_paths << ::Rails.root.join('lib')
 
     config.after_initialize do
       ActiveRecord::Base.logger = nil
