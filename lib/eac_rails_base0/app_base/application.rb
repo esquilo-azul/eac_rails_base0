@@ -53,5 +53,11 @@ module EacRailsBase0App
 
     migrate_deprecated_dir = ::Rails.root.join('db', 'migrate_deprecated')
     config.paths['db/migrate'] << migrate_deprecated_dir if migrate_deprecated_dir.directory?
+
+    if ::Rails.env.development?
+      require 'letter_opener'
+      config.action_mailer.delivery_method = :letter_opener
+      config.action_mailer.perform_deliveries = true
+    end
   end
 end
