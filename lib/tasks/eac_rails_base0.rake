@@ -13,16 +13,22 @@ namespace :eac_rails_base0 do
   end
   Rake::Task['eac_rails_base0:rspec'].enhance ['db:test:prepare']
 
-  desc 'Minitest for engines'
-  ::Rake::TestTask.new('minitest:engines' => 'test:prepare') do |t|
-    t.pattern = 'engines/*/test/**/*_test.rb'
+  namespace :minitest do
+    { core: '', engines: 'engines/*/' }.each do |name, pattern_prefix|
+      ::Rake::TestTask.new(name => 'test:prepare') do |t|
+        t.libs << 'test'
+        t.pattern = "#{pattern_prefix}test/**/*_test.rb"
+        t.ruby_opts = %w[-W0]
+        t.verbose = false
+      end
+    end
   end
 
-  desc 'Minitest for application'
-  task minitest: %w[test:run eac_rails_base0:minitest:engines]
+  desc 'Minitest for application and engines'
+  task minitest: %w[core engines].map { |task| "eac_rails_base0:minitest:#{task}" }
 
   desc 'Minitest and RSpec for application'
-  task test: ['test', 'eac_rails_base0:rspec']
+  task test: ['eac_rails_base0:minitest', 'eac_rails_base0:rspec']
 end
 
 Rake::Task['default'].clear
