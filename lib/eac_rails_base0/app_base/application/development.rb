@@ -8,10 +8,16 @@ module EacRailsBase0App
       common_concern do
         next unless ::Rails.env.development?
 
-        setup('letter_opener')
+        setup('assets', 'letter_opener')
       end
 
       module ClassMethods
+        def setup_assets
+          config.assets.debug = true
+          config.assets.digest = true
+          config.assets.raise_runtime_errors = true
+        end
+
         def setup_letter_opener
           require 'letter_opener'
           config.action_mailer.delivery_method = :letter_opener
