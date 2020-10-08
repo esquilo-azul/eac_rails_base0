@@ -16,8 +16,5 @@ module EacRailsBase0App
     end
 
     require_sub __FILE__, include_modules: true
-
-    # Do not swallow errors in after_commit/after_rollback callbacks.
-    config.active_record.raise_in_transactional_callbacks = true if ::Rails.version < '5'
   end
 end
