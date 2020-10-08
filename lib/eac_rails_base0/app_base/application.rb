@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require 'eac_ruby_utils/core_ext'
 require 'rails/all'
 
 # Require the gems listed in Gemfile, including any gems
@@ -18,6 +19,13 @@ require local_configuration if File.exist?(local_configuration)
 
 module EacRailsBase0App
   class Application < Rails::Application
+    class << self
+      def setup(*args)
+        args.each { |a| send("setup_#{a}") }
+      end
+    end
+
+    require_sub __FILE__, include_modules: true
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
