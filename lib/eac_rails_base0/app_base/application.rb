@@ -19,11 +19,5 @@ module EacRailsBase0App
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true if ::Rails.version < '5'
-
-    if ::Rails.env.development?
-      require 'letter_opener'
-      config.action_mailer.delivery_method = :letter_opener
-      config.action_mailer.perform_deliveries = true
-    end
   end
 end
