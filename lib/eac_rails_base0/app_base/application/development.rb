@@ -8,7 +8,7 @@ module EacRailsBase0App
       common_concern do
         next unless ::Rails.env.development?
 
-        setup('assets', 'letter_opener')
+        setup('assets', 'log', 'letter_opener')
       end
 
       module ClassMethods
@@ -22,6 +22,11 @@ module EacRailsBase0App
           require 'letter_opener'
           config.action_mailer.delivery_method = :letter_opener
           config.action_mailer.perform_deliveries = true
+        end
+
+        def setup_log
+          config.active_support.deprecation = :log
+          config.logger = Logger.new(STDOUT)
         end
       end
     end
