@@ -26,7 +26,7 @@ module EacRailsBase0
       end
 
       def db
-        # Do nothing
+        directory 'db'
       end
 
       def lib
