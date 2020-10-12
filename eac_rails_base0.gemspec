@@ -40,6 +40,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'jquery-ui-rails'
   s.add_dependency 'launchy'
   s.add_dependency 'letter_opener'
+  s.add_dependency 'listen'
   s.add_dependency 'puma'
   s.add_dependency 'rails', '>= 4.2.11.3'
   s.add_dependency 'rails-i18n', '~> 4.0'
