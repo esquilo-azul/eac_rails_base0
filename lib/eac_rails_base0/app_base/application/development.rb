@@ -48,7 +48,9 @@ module EacRailsBase0App
 
         def setup_log
           config.active_support.deprecation = :log
-          config.logger = Logger.new(STDOUT)
+          logger = ActiveSupport::Logger.new(STDOUT)
+          logger.formatter = config.log_formatter
+          config.logger = ActiveSupport::TaggedLogging.new(logger)
         end
       end
     end
