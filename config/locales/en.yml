@@ -2,6 +2,7 @@ en:
   eac_rails_base0:
     mailer:
       info: 'E-mail information'
+      send_test: 'E-mail sending test'
     main_menu:
       admin:
         mailer: E-mail
