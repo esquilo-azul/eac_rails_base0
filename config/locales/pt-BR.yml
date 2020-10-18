@@ -31,5 +31,6 @@ pt-BR:
       admin:
         aranha: Aranha
         br_railties: BrRailties
+        mailer: E-mail
         eac_users_support: Usuários
         tasks_scheduler: Agendador

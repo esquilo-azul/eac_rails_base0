@@ -4,7 +4,7 @@ module EacRailsBase0
   module LayoutHelper
     APP_TITLE_METHOD = 'app_title'
     APP_MAIN_MENU_ENTRIES_METHOD = 'app_main_menu_entries'
-    ADMIN_ENTRIES = %w[eac_users_support tasks_scheduler aranha br_railties].freeze
+    ADMIN_ENTRIES = %w[eac_users_support tasks_scheduler aranha br_railties mailer].freeze
 
     def base0_app_title
       if respond_to?(APP_TITLE_METHOD)
@@ -33,6 +33,10 @@ module EacRailsBase0
         [::I18n.t("eac_rails_base0.main_menu.admin.#{identifier}"),
          send("#{identifier}_main_menu_admin_entries")]
       end.to_h
+    end
+
+    def mailer_main_menu_admin_entries
+      {}
     end
 
     def eac_users_support_main_menu_admin_entries
