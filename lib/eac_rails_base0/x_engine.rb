@@ -34,5 +34,9 @@ module EacRailsBase0
 
       ::Find.find(self.class.local_root.to_path).include?(config.root.to_path)
     end
+
+    def namespace_module_name
+      __getobj__.class.name.deconstantize
+    end
   end
 end
