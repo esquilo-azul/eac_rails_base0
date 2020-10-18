@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   mount ::BrRailties::Engine => '/br_railties'
 
   namespace(:eac_rails_base0) do
-    resources(:mailer, include: []) do
+    resources(:mailer, only: []) do
       collection do
         get :info
       end
