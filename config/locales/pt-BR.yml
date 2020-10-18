@@ -29,7 +29,9 @@ pt-BR:
       unsetted: Não especificada
     mailer:
       info: 'Informações de e-mail'
+      send_submit: 'Enviar'
       send_test: 'Envio de e-mail de teste'
+      send_test_successful: 'E-mail enviado para %{address}'
     main_menu:
       admin:
         aranha: Aranha

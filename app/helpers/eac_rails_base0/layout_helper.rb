@@ -36,9 +36,12 @@ module EacRailsBase0
     end
 
     def mailer_main_menu_admin_entries
-      {
-        t('eac_rails_base0.mailer.info') => [main_app.info_eac_rails_base0_mailer_index_path]
-      }
+      %w[info send_test].map do |action|
+        [
+          t("eac_rails_base0.mailer.#{action}"),
+          main_app.send("#{action}_eac_rails_base0_mailer_index_path")
+        ]
+      end.to_h
     end
 
     def eac_users_support_main_menu_admin_entries

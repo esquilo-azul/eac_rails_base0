@@ -2,7 +2,9 @@ en:
   eac_rails_base0:
     mailer:
       info: 'E-mail information'
+      send_submit: 'Enviar'
       send_test: 'E-mail sending test'
+      send_test_successful: 'E-mail sended to %{address}'
     main_menu:
       admin:
         mailer: E-mail

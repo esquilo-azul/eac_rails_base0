@@ -1,0 +1,5 @@
+<h2><%= t('eac_rails_base0.mailer.send_test') %></h2>
+<%= common_form(@record, url: send_test_eac_rails_base0_mailer_index_path,
+  method: :post, submit_label: t('eac_rails_base0.mailer.send_submit')) do |f| %>
+  <%= f.email_field :alternative_address %>
+<% end %>
