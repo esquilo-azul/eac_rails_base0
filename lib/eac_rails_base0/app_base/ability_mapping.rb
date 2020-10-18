@@ -17,6 +17,11 @@ module EacRailsBase0
         map_controller 'BrRailties::Municipalities', :manage, ::BrRailties::Municipality
         map_controller 'ScheduledTasks', :manage, ::ScheduledTask
         map_controller 'TasksSchedulerDaemon', :manage, ::ScheduledTask
+        map_eac_rails_base0
+      end
+
+      def map_eac_rails_base0
+        map_controller 'EacRailsBase0::Mailer', :manage, :eac_rails_base0_mailer
       end
     end
   end

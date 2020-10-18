@@ -7,4 +7,12 @@ Rails.application.routes.draw do
   mount ::EacUsersSupport::Engine => '/'
   mount ::Aranha::Engine => '/aranha'
   mount ::BrRailties::Engine => '/br_railties'
+
+  namespace(:eac_rails_base0) do
+    resources(:mailer, include: []) do
+      collection do
+        get :info
+      end
+    end
+  end
 end

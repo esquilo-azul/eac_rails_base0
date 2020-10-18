@@ -36,7 +36,9 @@ module EacRailsBase0
     end
 
     def mailer_main_menu_admin_entries
-      {}
+      {
+        t('eac_rails_base0.mailer.info') => [main_app.info_eac_rails_base0_mailer_index_path]
+      }
     end
 
     def eac_users_support_main_menu_admin_entries

@@ -1,5 +1,7 @@
 en:
   eac_rails_base0:
+    mailer:
+      info: 'E-mail information'
     main_menu:
       admin:
         mailer: E-mail

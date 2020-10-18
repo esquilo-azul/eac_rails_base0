@@ -61,6 +61,7 @@ module EacRailsBase0
         can :manage, ::BrRailties::FederalUnit
         can :manage, ::BrRailties::Municipality
         can :manage, ::ScheduledTask
+        can :manage, :eac_rails_base0_mailer
       end
     end
   end

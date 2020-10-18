@@ -1,0 +1,17 @@
+<h2><%= t('eac_rails_base0.mailer.info') %></h2>
+<% @sections.each do |section_title, section_data| %>
+  <h3><%= section_title %></h3>
+  <dl>
+    <% section_data.each do |key, value| %>
+      <dt><%= key %></dt>
+      <dd>
+        <% if key.to_s.downcase.include?('password') %>
+          <em><%= value.present? ? 'Present' : 'Blank' %></em>
+        <% else %>
+          <%= value %>
+        <% end %>
+        (<%= value.class %>)
+      </dd>
+    <% end %>
+  </dl>
+<% end %>

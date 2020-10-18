@@ -27,6 +27,8 @@ pt-BR:
   eac_rails_base0:
     app_version:
       unsetted: Não especificada
+    mailer:
+      info: 'Informações de e-mail'
     main_menu:
       admin:
         aranha: Aranha
