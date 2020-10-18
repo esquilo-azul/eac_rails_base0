@@ -22,4 +22,3 @@
 config/database.y*ml
 config/envvars.y*ml
 config/envvars.d/*.y*ml
-config/local_configuration.rb

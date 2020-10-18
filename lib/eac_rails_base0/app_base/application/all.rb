@@ -6,8 +6,7 @@ module EacRailsBase0App
   class Application < Rails::Application
     module All
       common_concern do
-        setup('local_configuration', 'assets_cache', 'dependencies', 'localization', 'load_paths',
-              'loggers')
+        setup('assets_cache', 'dependencies', 'localization', 'load_paths', 'loggers')
       end
 
       module ClassMethods
@@ -43,12 +42,6 @@ module EacRailsBase0App
 
         def setup_load_paths
           config.autoload_paths << Rails.root.join('lib')
-        end
-
-        def setup_local_configuration
-          local_configuration = ::File.join(rails_root(APP_PATH), 'config',
-                                            'local_configuration.rb')
-          require local_configuration if File.exist?(local_configuration)
         end
 
         def setup_localization
