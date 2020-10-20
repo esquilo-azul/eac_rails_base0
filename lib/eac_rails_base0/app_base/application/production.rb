@@ -33,11 +33,7 @@ module EacRailsBase0App
           config.log_tags = [:request_id]
           config.active_support.deprecation = :notify
           config.log_formatter = ::Logger::Formatter.new
-          return if ENV['RAILS_LOG_TO_STDOUT'].blank?
-
-          logger = ActiveSupport::Logger.new(STDOUT)
-          logger.formatter = config.log_formatter
-          config.logger = ActiveSupport::TaggedLogging.new(logger)
+          config.logger = new_stdout_logger if ENV['RAILS_LOG_TO_STDOUT'].blank?
         end
 
         def setup_public_file_server
