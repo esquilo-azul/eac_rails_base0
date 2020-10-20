@@ -6,7 +6,9 @@ module EacRailsBase0App
   class Application < Rails::Application
     module Test
       ACTION_MAILER_CONFIGS = {
-        delivery_method: :test
+        delivery_method: :test,
+        default_url_options: { host: 'localhost', port: 3000 },
+        default_options: { from: 'myadddress@example.net', reply_to: '' }
       }.freeze
 
       common_concern do
