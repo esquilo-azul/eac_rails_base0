@@ -1,10 +1,1 @@
-<%
-user_menu = {}
-if current_user
-  user_menu[current_user.to_s] = [main_app.root_path]
-  user_menu['Sair'] = [eac_users_support.destroy_user_session_path, link_method: :delete]
-else
-  user_menu['Entrar'] = [eac_users_support.new_user_session_path]
-end
-%>
-<%= bootstrap_dropdown_menu(user_menu, class: 'navbar-right') %>
+<%= bootstrap_dropdown_menu(base0_user_menu_entries, class: 'navbar-right') %>
