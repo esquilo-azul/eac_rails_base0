@@ -12,7 +12,7 @@ RSpec.configure do |config|
 end
 
 FactoryBot.define do
-  factory :user, class: ::EacUsersSupport::User do
+  factory :admin_user, class: ::EacUsersSupport::User do
     email { 'admin@example.com' }
     password { 'mysecret' }
     confirmed_at { ::Time.zone.now }
@@ -20,7 +20,7 @@ FactoryBot.define do
 end
 
 RSpec.shared_context 'when user is admin', shared_context: :metadata do
-  let(:user) { ::FactoryBot.create(:user) }
+  let(:user) { ::FactoryBot.create(:admin_user) }
 
   before do
     visit '/users/sign_in'
