@@ -1,11 +1,9 @@
 # frozen_string_literal: true
 
-require 'aranha/engine'
-
 Rails.application.routes.draw do
   mount ::EacRailsUtils::Engine => '/'
   mount ::EacUsersSupport::Engine => '/'
-  mount ::Aranha::Engine => '/aranha'
+  mount ::Aranha::Rails::Engine => '/aranha'
   mount ::BrRailties::Engine => '/br_railties'
 
   namespace(:eac_rails_base0) do
