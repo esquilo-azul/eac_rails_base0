@@ -49,7 +49,8 @@ module EacRailsBase0
 
     def aranha_main_menu_admin_entries
       {
-        ::Aranha::Address.model_name.human(count: 2) => [aranha.addresses_path]
+        ::Aranha::Address.model_name.human(count: 2) => [aranha.addresses_path],
+        ::Aranha::StartPoint.model_name.human(count: 2) => [aranha.start_points_path]
       }
     end
 

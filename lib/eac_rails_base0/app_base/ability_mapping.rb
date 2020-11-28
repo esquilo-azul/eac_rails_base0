@@ -13,6 +13,7 @@ module EacRailsBase0
         map_devise_invitable
         map_controller 'EacUsersSupport::Admin::Users', :manage, ::EacUsersSupport::User
         map_controller 'Aranha::Addresses', :manage, ::Aranha::Address
+        map_controller 'Aranha::StartPoints', :manage, ::Aranha::StartPoint
         map_controller 'BrRailties::FederalUnits', :manage, ::BrRailties::FederalUnit
         map_controller 'BrRailties::Municipalities', :manage, ::BrRailties::Municipality
         map_controller 'ScheduledTasks', :manage, ::ScheduledTask
