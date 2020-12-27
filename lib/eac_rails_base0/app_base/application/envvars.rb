@@ -32,7 +32,7 @@ module EacRailsBase0App
           vars = ::EacRubyUtils::Yaml.load(path.read)
           raise "\"#{path}\" does not contain a Hash" unless vars.is_a?(::Hash)
 
-          vars.each { |name, value| ENV[name.to_s] = value }
+          vars.each { |name, value| ENV[name.to_s] = value.to_s }
         end
 
         def setup_envvars
