@@ -26,16 +26,13 @@ Gem::Specification.new do |s|
   s.add_dependency 'br_railties', '~> 0.4', '>= 0.4.1'
   s.add_dependency 'byebug' # Development
   s.add_dependency 'can_can_dry', '~> 0.5'
-  s.add_dependency 'capybara' # Test
   s.add_dependency 'carrierwave', '~> 1.3', '>= 1.3.1'
   s.add_dependency 'coffee-rails', '>= 4.2.2'
   s.add_dependency 'eac_cli', '~> 0.21', '>= 0.21.1'
   s.add_dependency 'eac_rails_utils', '~> 0.10'
-  s.add_dependency 'eac_ruby_gem_support', '~> 0.2'
   s.add_dependency 'eac_ruby_gems_utils', '~> 0.6', '>= 0.6.3'
   s.add_dependency 'eac_ruby_utils', '~> 0.32'
   s.add_dependency 'eac_users_support', '~> 0.8', '>= 0.8.2'
-  s.add_dependency 'factory_bot_rails', '~> 4.0' # Test
   s.add_dependency 'fog-aws', '~> 3.5', '>= 3.5.2'
   s.add_dependency 'jbuilder', '~> 2.0'
   s.add_dependency 'jquery-rails'
@@ -47,7 +44,6 @@ Gem::Specification.new do |s|
   s.add_dependency 'rails', '~> 5.1.7'
   s.add_dependency 'rails-i18n', '~> 4.0'
   s.add_dependency 'recordselect', '>= 3.10.1'
-  s.add_dependency 'rspec-rails', '~> 3.7' # Test
   s.add_dependency 'sass-rails', '~> 5.0'
   s.add_dependency 'spring' # Development
   s.add_dependency 'tasks_scheduler', '~> 0.4'
@@ -57,4 +53,6 @@ Gem::Specification.new do |s|
   s.add_dependency 'web-console', '~> 2.0' # Development
   s.add_runtime_dependency 'pg', '~> 0.15'
   s.add_runtime_dependency 'rails_12factor' # Production
+
+  s.add_development_dependency 'eac_rails_gem_support', '~> 0.1'
 end
