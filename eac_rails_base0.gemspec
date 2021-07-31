@@ -24,7 +24,6 @@ Gem::Specification.new do |s|
   s.add_dependency 'aranha-rails', '~> 0.2'
   s.add_dependency 'bootstrap-sass', '~> 3.4.1'
   s.add_dependency 'br_railties', '~> 0.4', '>= 0.4.1'
-  s.add_dependency 'byebug' # Development
   s.add_dependency 'can_can_dry', '~> 0.5'
   s.add_dependency 'carrierwave', '~> 1.3', '>= 1.3.1'
   s.add_dependency 'coffee-rails', '>= 4.2.2'
