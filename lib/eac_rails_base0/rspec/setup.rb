@@ -5,15 +5,13 @@ require 'factory_bot'
 
 module EacRailsBase0
   module Rspec
-    class Setup
-      common_constructor :setup_obj
-
-      def perform
-        return unless defined?(::Rails)
+    module Setup
+      def self.extended(obj)
+        return unless obj.rails_app_path
 
         %w[engines admin_user non_admin_user admin_example non_admin_example
            anonymous_example].each do |m|
-          send("setup_#{m}")
+          obj.send("setup_#{m}")
         end
       end
 
