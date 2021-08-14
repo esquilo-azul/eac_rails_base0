@@ -21,7 +21,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency 'active_scaffold', '~> 3.5.5'
   s.add_dependency 'aranha-parsers', '~> 0.6'
-  s.add_dependency 'aranha-rails', '~> 0.2'
+  s.add_dependency 'aranha-rails', '~> 0.6'
   s.add_dependency 'bootstrap-sass', '~> 3.4.1'
   s.add_dependency 'br_railties', '~> 0.4', '>= 0.4.1'
   s.add_dependency 'can_can_dry', '~> 0.5'
