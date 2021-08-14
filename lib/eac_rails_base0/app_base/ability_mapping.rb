@@ -26,6 +26,7 @@ module EacRailsBase0
 
       def map_aranha
         map_controller 'Aranha::Addresses', :manage, ::Aranha::Address
+        map_controller 'Aranha::ProcessorConfigurations', :manage, ::Aranha::ProcessorConfiguration
         map_controller 'Aranha::StartPoints', :manage, ::Aranha::StartPoint
       end
     end
