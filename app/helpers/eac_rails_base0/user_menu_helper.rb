@@ -8,9 +8,9 @@ module EacRailsBase0
         r[current_user.to_s] = {
           'Alterar senha' => [eac_users_support.edit_user_registration_path]
         }
-        r['Sair'] = [eac_users_support.destroy_user_session_path, link_method: :delete]
+        r[t('devise.log_out')] = [eac_users_support.destroy_user_session_path, link_method: :delete]
       else
-        r['Entrar'] = [eac_users_support.new_user_session_path]
+        r[t('devise.log_in')] = [eac_users_support.new_user_session_path]
       end
       r
     end
