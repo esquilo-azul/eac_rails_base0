@@ -6,12 +6,18 @@ module EacRailsBase0App
   class Application < Rails::Application
     module All
       common_concern do
-        setup('assets_cache', 'dependencies', 'localization', 'load_paths', 'loggers')
+        setup('app_root', 'assets_cache', 'dependencies', 'localization', 'load_paths', 'loggers')
       end
 
       module ClassMethods
         def app_temporary_directory
           ::File.join(::Dir.tmpdir, ::Rails.root.to_path.parameterize, 'tmp')
+        end
+
+        def setup_app_root
+          return unless defined?(APP_PATH)
+
+          config.root = find_root(APP_PATH)
         end
 
         def setup_assets_cache
