@@ -14,13 +14,6 @@ module EacRailsBase0App
           ::File.join(::Dir.tmpdir, ::Rails.root.to_path.parameterize, 'tmp')
         end
 
-        def rails_root(dir)
-          return dir if ::File.exist?(::File.join(dir, 'config.ru'))
-          raise 'config.ru not found in ascendent path' if dir == '/'
-
-          rails_root(::File.dirname(dir))
-        end
-
         def setup_assets_cache
           config.assets.configure do |env|
             env.cache = Sprockets::Cache::FileStore.new(
