@@ -6,7 +6,8 @@ module EacRailsBase0App
   class Application < Rails::Application
     module All
       common_concern do
-        setup('app_root', 'assets_cache', 'dependencies', 'localization', 'load_paths', 'loggers')
+        setup('app_root', 'assets_cache', 'dependencies', 'defaults', 'localization', 'load_paths',
+              'loggers')
       end
 
       module ClassMethods
@@ -28,6 +29,10 @@ module EacRailsBase0App
               env.logger
             )
           end
+        end
+
+        def setup_defaults
+          config.load_defaults 5.1
         end
 
         def setup_dependencies
