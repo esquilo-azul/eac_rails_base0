@@ -11,6 +11,7 @@ module EacRailsBase0
     helper ::EacRailsUtils::FormatterHelper
     helper ::EacRailsUtils::LinksHelper
     helper ::EacRailsUtils::OpenGraphProtocolHelper
+    helper ::EacRailsBase0::PanelDefaultHelper
     helper ::EacRailsBase0::UserMenuHelper
 
     # Prevent CSRF attacks by raising an exception.
