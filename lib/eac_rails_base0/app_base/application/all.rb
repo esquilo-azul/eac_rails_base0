@@ -6,8 +6,8 @@ module EacRailsBase0App
   class Application < Rails::Application
     module All
       common_concern do
-        setup('app_root', 'assets_cache', 'dependencies', 'defaults', 'localization', 'load_paths',
-              'loggers')
+        setup('app_root', 'active_record', 'assets_cache', 'dependencies', 'defaults',
+              'localization', 'load_paths', 'loggers')
       end
 
       module ClassMethods
@@ -19,6 +19,10 @@ module EacRailsBase0App
           return unless defined?(APP_PATH)
 
           config.root = find_root(APP_PATH)
+        end
+
+        def setup_active_record
+          config.active_record.sqlite3.represent_boolean_as_integer = true
         end
 
         def setup_assets_cache
