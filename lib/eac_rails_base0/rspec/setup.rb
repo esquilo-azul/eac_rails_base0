@@ -46,24 +46,8 @@ module EacRailsBase0
         end
       end
 
-      def setup_admin_example # rubocop:disable Metrics/AbcSize, Metrics/MethodLength
-        ::RSpec.shared_context 'when user is admin', shared_context: :metadata do
-          let(:user) { ::FactoryBot.create(:admin_user) }
-
-          before do
-            visit '/users/sign_in'
-            fill_in ::I18n.translate!('activerecord.attributes.eac_users_support/user.email'),
-                    with: user.email
-            fill_in ::I18n.translate!('activerecord.attributes.eac_users_support/user.password'),
-                    with: user.password
-            click_button ::I18n.translate!('devise.log_in')
-          end
-
-          it 'user should be logged' do
-            expect(page).to have_content user.email
-            expect(::EacUsersSupport::User.current_user).not_to be_nil
-          end
-        end
+      def setup_admin_example
+        require 'eac_rails_base0/rspec/shared_contexts/when_user_is_admin'
       end
 
       def setup_non_admin_example # rubocop:disable Metrics/AbcSize, Metrics/MethodLength
