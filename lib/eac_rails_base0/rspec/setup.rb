@@ -54,28 +54,8 @@ module EacRailsBase0
         require 'eac_rails_base0/rspec/shared_contexts/when_user_is_non_admin'
       end
 
-      def setup_anonymous_example # rubocop:disable Metrics/AbcSize, Metrics/MethodLength
-        ::RSpec.shared_context 'when user is anonymous', shared_context: :metadata do
-          before do
-            visit '/'
-            if link_exist?(::I18n.translate!('devise.log_out'))
-              click_link(::I18n.translate!('devise.log_out'))
-            elsif !link_exist?(::I18n.translate!('devise.log_in'))
-              raise 'login nor logout link found'
-            end
-          end
-
-          it 'user should be not logged' do
-            expect(::EacUsersSupport::User.current_user).to be_nil
-          end
-
-          def link_exist?(locator) # rubocop:disable Lint/NestedMethodDefinition
-            find_link(locator)
-            true
-          rescue Capybara::ElementNotFound
-            false
-          end
-        end
+      def setup_anonymous_example
+        require 'eac_rails_base0/rspec/shared_contexts/when_user_is_anonymous'
       end
     end
   end
