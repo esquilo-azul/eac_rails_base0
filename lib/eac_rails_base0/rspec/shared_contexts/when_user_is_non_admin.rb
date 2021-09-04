@@ -14,6 +14,9 @@
 
   it 'user should be logged' do
     expect(page).to have_content user.email
-    expect(::EacUsersSupport::User.current_user).not_to be_nil
+  end
+
+  it 'should be a link to logout' do
+    expect(page).to have_link(nil, href: '/users/sign_out')
   end
 end

@@ -10,8 +10,8 @@
     end
   end
 
-  it 'user should be not logged' do
-    expect(::EacUsersSupport::User.current_user).to be_nil
+  it 'should be a link to log in' do
+    expect(page).to have_link(nil, href: '/users/sign_in')
   end
 
   def link_exist?(locator)
