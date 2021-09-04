@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require 'eac_active_scaffold'
 require 'active_scaffold/bridges/cancan/cancan_bridge'
 
 module EacRailsBase0

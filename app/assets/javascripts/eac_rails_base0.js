@@ -8,3 +8,4 @@
 //= require aranha/application
 //= require tasks_scheduler
 //= require br_railties
+//= require eac_active_scaffold
