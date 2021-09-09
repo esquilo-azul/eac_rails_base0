@@ -39,6 +39,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'launchy'
   s.add_dependency 'letter_opener'
   s.add_dependency 'listen'
+  s.add_dependency 'premailer-rails'
   s.add_dependency 'puma'
   s.add_dependency 'rails', '~> 5.2.6'
   s.add_dependency 'rails-i18n'
