@@ -33,7 +33,7 @@ namespace :eac_rails_base0 do
 end
 
 Rake::Task['default'].clear
-task default: %w[eac_rails_base0:gems:test_all]
+task default: %w[eac_rails_base0:test]
 
 Rake::Task['test'].clear
 task test: %w[eac_rails_base0:minitest]
