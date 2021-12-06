@@ -14,7 +14,8 @@ namespace :eac_rails_base0 do
   Rake::Task['eac_rails_base0:rspec'].enhance ['db:test:prepare']
 
   namespace :minitest do
-    { core: '', engines: 'engines/*/' }.each do |name, pattern_prefix|
+    { core: '', engines: "#{::EacRailsBase0::Paths.engines_subpath}/*/" }
+      .each do |name, pattern_prefix|
       ::Rake::TestTask.new(name => 'test:prepare') do |t|
         t.libs << 'test'
         t.pattern = "#{pattern_prefix}test/**/*_test.rb"

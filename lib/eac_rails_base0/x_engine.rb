@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'eac_ruby_utils/core_ext'
+require 'eac_rails_base0/paths'
 require 'find'
 require 'delegate'
 
@@ -11,7 +12,7 @@ module EacRailsBase0
       enable_simple_cache
 
       def local_root
-        ::Rails.root.join('engines')
+        ::Rails.root.join(::EacRailsBase0::Paths.engines_subpath)
       end
 
       private

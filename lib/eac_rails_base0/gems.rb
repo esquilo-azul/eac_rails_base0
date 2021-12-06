@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require 'eac_rails_base0/paths'
 require 'eac_ruby_gems_utils/gem'
 
 module EacRailsBase0
@@ -8,7 +9,7 @@ module EacRailsBase0
       enable_simple_cache
 
       def vendor_gems_root
-        ::Rails.root.join('vendor', 'gems')
+        ::Rails.root.join(::EacRailsBase0::Paths.sub_gems_subpath)
       end
 
       private
