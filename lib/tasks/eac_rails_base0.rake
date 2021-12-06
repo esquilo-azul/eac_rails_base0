@@ -9,7 +9,8 @@ namespace :eac_rails_base0 do
   end
 
   ::RSpec::Core::RakeTask.new(:rspec) do |t|
-    t.rspec_opts = "--pattern '**/spec/**/*_spec.rb'"
+    t.rspec_opts =
+      "--pattern '{spec,#{::EacRailsBase0::Paths.engines_subpath}/*/spec}/**/*_spec.rb'"
   end
   Rake::Task['eac_rails_base0:rspec'].enhance ['db:test:prepare']
 
