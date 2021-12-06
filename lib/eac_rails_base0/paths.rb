@@ -11,7 +11,7 @@ module EacRailsBase0
       end
 
       def sub_gems_subpath
-        ::Pathname.new('vendor').join('gems')
+        ::Pathname.new('sub').join('gems')
       end
     end
   end
