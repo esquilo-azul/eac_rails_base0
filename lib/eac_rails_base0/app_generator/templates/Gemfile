@@ -13,7 +13,6 @@ group :production do
 end
 
 # Gems locais
-require_relative 'lib/local_plugins'
-LocalPlugins.plugins.each do |p|
-  gem p.name, path: p.root
+Dir["#{__dir__}/{vendor/gems,engines}/*/*.gemspec"].each do |file|
+  gem ::File.basename(::File.dirname(file)), path: ::File.dirname(file)
 end
