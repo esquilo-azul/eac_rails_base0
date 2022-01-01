@@ -8,6 +8,7 @@
 @import 'jquery-ui';
 @import 'eac_rails_base0/default_configuration';
 @import 'eac_rails_base0/components';
+@import 'eac_rails_base0/styles_legend';
 
 .alert-notice {
   @extend .alert-info;
