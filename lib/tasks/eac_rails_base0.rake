@@ -1,18 +1,26 @@
 # frozen_string_literal: true
 
 require 'rake/testtask'
-require 'rspec/core/rake_task'
+
+rspec_loaded = true
+begin
+  require 'rspec/core/rake_task'
+rescue LoadError
+  rspec_loaded = false
+end
 
 namespace :eac_rails_base0 do
   desc 'Remove all temporary files.'
   task clear: ['db:schema:cache:clear', 'log:clear', 'tmp:clear', 'assets:clobber'] do
   end
 
-  ::RSpec::Core::RakeTask.new(:rspec) do |t|
-    t.rspec_opts =
-      "--pattern '{spec,#{::EacRailsBase0::Paths.engines_subpath}/*/spec}/**/*_spec.rb'"
+  if rspec_loaded
+    ::RSpec::Core::RakeTask.new(:rspec) do |t|
+      t.rspec_opts =
+        "--pattern '{spec,#{::EacRailsBase0::Paths.engines_subpath}/*/spec}/**/*_spec.rb'"
+    end
+    Rake::Task['eac_rails_base0:rspec'].enhance ['db:test:prepare']
   end
-  Rake::Task['eac_rails_base0:rspec'].enhance ['db:test:prepare']
 
   namespace :minitest do
     { core: '', engines: "#{::EacRailsBase0::Paths.engines_subpath}/*/" }
@@ -30,7 +38,7 @@ namespace :eac_rails_base0 do
   task minitest: %w[core engines].map { |task| "eac_rails_base0:minitest:#{task}" }
 
   desc 'Minitest and RSpec for application'
-  task test: ['eac_rails_base0:minitest', 'eac_rails_base0:rspec']
+  task test: ['eac_rails_base0:minitest'] + (rspec_loaded ? ['eac_rails_base0:rspec'] : [])
 end
 
 Rake::Task['default'].clear
