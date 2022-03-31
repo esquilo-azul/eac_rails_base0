@@ -17,7 +17,6 @@ module EacRailsBase0
           template 'application.rb'
           template 'environment.rb'
           template 'secrets.yml'
-          directory 'environments'
         end
       end
 
