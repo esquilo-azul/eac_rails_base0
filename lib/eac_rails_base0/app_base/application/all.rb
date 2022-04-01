@@ -7,7 +7,7 @@ module EacRailsBase0App
     module All
       common_concern do
         setup('app_root', 'active_record', 'assets_cache', 'dependencies', 'defaults',
-              'localization', 'load_paths', 'loggers')
+              'localization', 'load_paths', 'loggers', 'unknown_asset_fallback')
       end
 
       module ClassMethods
@@ -33,6 +33,10 @@ module EacRailsBase0App
               env.logger
             )
           end
+        end
+
+        def setup_unknown_asset_fallback
+          config.assets.unknown_asset_fallback = false
         end
 
         def setup_defaults
