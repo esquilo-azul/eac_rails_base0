@@ -38,7 +38,7 @@ module EacRailsBase0
       end
 
       def test
-        template 'test/test_helper.rb'
+        # Do nothing
       end
 
       def tmp
