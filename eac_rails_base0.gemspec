@@ -46,7 +46,6 @@ Gem::Specification.new do |s|
   s.add_dependency 'sass-rails', '~> 5.0'
   s.add_dependency 'spring' # Development
   s.add_dependency 'tasks_scheduler', '~> 0.4'
-  s.add_dependency 'therubyracer'
   s.add_dependency 'turbolinks'
   s.add_dependency 'uglifier', '>= 1.3.0'
   s.add_runtime_dependency 'pg', '~> 0.15'
