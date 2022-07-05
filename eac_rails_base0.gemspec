@@ -50,5 +50,5 @@ Gem::Specification.new do |s|
   s.add_dependency 'uglifier', '>= 1.3.0'
   s.add_runtime_dependency 'pg', '~> 0.15'
 
-  s.add_development_dependency 'eac_rails_gem_support', '~> 0.4'
+  s.add_development_dependency 'eac_rails_gem_support', '~> 0.4', '>= 0.4.1'
 end
