@@ -46,7 +46,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'sass-rails', '~> 5.1'
   s.add_dependency 'spring', '~> 4.0'
   s.add_dependency 'tasks_scheduler', '~> 0.6', '>= 0.6.12'
-  s.add_dependency 'turbolinks'
+  s.add_dependency 'turbolinks', '~> 5.2', '>= 5.2.1'
   s.add_dependency 'uglifier', '>= 1.3.0'
   s.add_runtime_dependency 'pg', '~> 0.15'
 
