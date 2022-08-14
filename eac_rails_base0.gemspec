@@ -42,7 +42,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'puma', '~> 5.6', '>= 5.6.4'
   s.add_dependency 'rails', '~> 5.2.8', '>= 5.2.8.1'
   s.add_dependency 'rails-i18n', '~> 5.1', '>= 5.1.3'
-  s.add_dependency 'recordselect', '>= 3.10.1'
+  s.add_dependency 'recordselect', '~> 3.10', '>= 3.10.4'
   s.add_dependency 'sass-rails', '~> 5.0'
   s.add_dependency 'spring' # Development
   s.add_dependency 'tasks_scheduler', '~> 0.6', '>= 0.6.10'
