@@ -32,7 +32,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'eac_ruby_utils', '~> 0.99'
   s.add_dependency 'eac_users_support', '~> 0.10', '>= 0.10.1'
   s.add_dependency 'fog-aws', '~> 3.14'
-  s.add_dependency 'jbuilder', '~> 2.0'
+  s.add_dependency 'jbuilder', '~> 2.11', '>= 2.11.5'
   s.add_dependency 'jquery-rails'
   s.add_dependency 'jquery-ui-rails'
   s.add_dependency 'launchy'
