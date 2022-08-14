@@ -37,7 +37,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'jquery-ui-rails', '~> 6.0', '>= 6.0.1'
   s.add_dependency 'launchy', '~> 2.5'
   s.add_dependency 'letter_opener', '~> 1.8', '>= 1.8.1'
-  s.add_dependency 'listen'
+  s.add_dependency 'listen', '~> 3.7', '>= 3.7.1'
   s.add_dependency 'premailer-rails'
   s.add_dependency 'puma'
   s.add_dependency 'rails', '~> 5.2.8'
