@@ -34,7 +34,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'fog-aws', '~> 3.14'
   s.add_dependency 'jbuilder', '~> 2.11', '>= 2.11.5'
   s.add_dependency 'jquery-rails', '~> 4.5'
-  s.add_dependency 'jquery-ui-rails'
+  s.add_dependency 'jquery-ui-rails', '~> 6.0', '>= 6.0.1'
   s.add_dependency 'launchy'
   s.add_dependency 'letter_opener'
   s.add_dependency 'listen'
