@@ -28,7 +28,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'coffee-rails', '~> 5.0'
   s.add_dependency 'eac_active_scaffold', '~> 0.2', '>= 0.2.3'
   s.add_dependency 'eac_cli', '~> 0.27', '>= 0.27.8'
-  s.add_dependency 'eac_rails_utils', '~> 0.15'
+  s.add_dependency 'eac_rails_utils', '~> 0.16'
   s.add_dependency 'eac_ruby_utils', '~> 0.74'
   s.add_dependency 'eac_users_support', '~> 0.10'
   s.add_dependency 'fog-aws', '~> 3.5', '>= 3.5.2'
