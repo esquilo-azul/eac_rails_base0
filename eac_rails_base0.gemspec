@@ -47,7 +47,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'spring', '~> 4.0'
   s.add_dependency 'tasks_scheduler', '~> 0.6', '>= 0.6.12'
   s.add_dependency 'turbolinks', '~> 5.2', '>= 5.2.1'
-  s.add_dependency 'uglifier', '>= 1.3.0'
+  s.add_dependency 'uglifier', '~> 4.2'
   s.add_runtime_dependency 'pg', '~> 0.15'
 
   s.add_development_dependency 'eac_rails_gem_support', '~> 0.4', '>= 0.4.1'
