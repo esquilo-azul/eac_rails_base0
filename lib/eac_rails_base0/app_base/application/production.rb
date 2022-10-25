@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'eac_ruby_utils/core_ext'
+require 'aranha/selenium/driver_factory/base'
 
 module EacRailsBase0App
   class Application < Rails::Application
@@ -8,10 +9,14 @@ module EacRailsBase0App
       common_concern do
         next unless ::Rails.env.production?
 
-        setup('assets', 'general', 'log', 'public_file_server')
+        setup('aranha', 'assets', 'general', 'log', 'public_file_server')
       end
 
       module ClassMethods
+        def setup_aranha
+          ::Aranha::Selenium::DriverFactory::Base.default_headless = false
+        end
+
         def setup_assets
           config.assets.js_compressor = :uglifier
           config.assets.compile = false
