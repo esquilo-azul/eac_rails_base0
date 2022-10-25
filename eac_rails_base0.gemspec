@@ -40,7 +40,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'letter_opener', '~> 1.8', '>= 1.8.1'
   s.add_dependency 'listen', '~> 3.7', '>= 3.7.1'
   s.add_dependency 'premailer-rails', '~> 1.11', '>= 1.11.1'
-  s.add_dependency 'puma', '~> 5.6', '>= 5.6.4'
+  s.add_dependency 'puma', '~> 5.6', '>= 5.6.5'
   s.add_dependency 'rails', '~> 5.2.8', '>= 5.2.8.1'
   s.add_dependency 'rails-i18n', '~> 5.1', '>= 5.1.3'
   s.add_dependency 'recordselect', '~> 3.10', '>= 3.10.4'
