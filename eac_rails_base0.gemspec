@@ -29,6 +29,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'coffee-rails', '~> 5.0'
   s.add_dependency 'eac_active_scaffold', '~> 0.2', '>= 0.2.3'
   s.add_dependency 'eac_cli', '~> 0.30', '>= 0.30.1'
+  s.add_dependency 'eac_rails_gem_support', '~> 0.4', '>= 0.4.1'
   s.add_dependency 'eac_rails_utils', '~> 0.17', '>= 0.17.1'
   s.add_dependency 'eac_ruby_utils', '~> 0.112'
   s.add_dependency 'eac_users_support', '~> 0.10', '>= 0.10.1'
@@ -50,6 +51,4 @@ Gem::Specification.new do |s|
   s.add_dependency 'turbolinks', '~> 5.2', '>= 5.2.1'
   s.add_dependency 'uglifier', '~> 4.2'
   s.add_runtime_dependency 'pg', '~> 0.15'
-
-  s.add_development_dependency 'eac_rails_gem_support', '~> 0.4', '>= 0.4.1'
 end
