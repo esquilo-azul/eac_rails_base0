@@ -36,7 +36,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'jbuilder', '~> 2.11', '>= 2.11.5'
   s.add_dependency 'jquery-rails', '~> 4.5', '>= 4.5.1'
   s.add_dependency 'jquery-ui-rails', '~> 6.0', '>= 6.0.1'
-  s.add_dependency 'launchy', '~> 2.5'
+  s.add_dependency 'launchy', '~> 2.5', '>= 2.5.2'
   s.add_dependency 'letter_opener', '~> 1.8', '>= 1.8.1'
   s.add_dependency 'listen', '~> 3.7', '>= 3.7.1'
   s.add_dependency 'premailer-rails', '~> 1.11', '>= 1.11.1'
