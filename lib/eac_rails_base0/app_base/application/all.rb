@@ -6,8 +6,9 @@ module EacRailsBase0App
   class Application < Rails::Application
     module All
       common_concern do
-        setup('app_root', 'engines', 'active_record', 'assets_cache', 'dependencies', 'defaults',
-              'localization', 'load_paths', 'loggers', 'unknown_asset_fallback')
+        setup('app_root', 'engines', 'local_engines', 'active_record', 'assets_cache',
+              'dependencies', 'defaults', 'localization', 'load_paths', 'loggers',
+              'unknown_asset_fallback')
       end
 
       module ClassMethods
@@ -37,6 +38,10 @@ module EacRailsBase0App
 
         def setup_engines
           require 'eac_rails_base0/engine'
+        end
+
+        def setup_local_engines
+          ::EacRailsBase0::XEngine.require_local
         end
 
         def setup_unknown_asset_fallback
