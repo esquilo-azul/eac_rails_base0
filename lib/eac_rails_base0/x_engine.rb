@@ -11,6 +11,12 @@ module EacRailsBase0
     class << self
       enable_simple_cache
 
+      def require_local
+        local_roots.each do |root|
+          require_dependency "#{root.basename.to_path.gsub('-', '/')}/engine"
+        end
+      end
+
       def local_root
         ::Rails.root.join(::EacRailsBase0::Paths.engines_subpath)
       end
@@ -23,6 +29,10 @@ module EacRailsBase0
 
       def local_uncached
         all.select(&:local?)
+      end
+
+      def local_roots
+        local_root.glob('*/*.gemspec').map(&:parent)
       end
     end
 
