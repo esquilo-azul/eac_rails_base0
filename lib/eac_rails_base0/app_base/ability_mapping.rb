@@ -11,7 +11,7 @@ module EacRailsBase0
       def initialize
         map_devise
         map_devise_invitable
-        map_controller 'EacUsersSupport::Admin::Users', :manage, ::EacUsersSupport::User
+        map_eac_users_support
         map_aranha
         map_br_railties
         map_tasks_schedulers
@@ -20,6 +20,10 @@ module EacRailsBase0
 
       def map_eac_rails_base0
         map_controller 'EacRailsBase0::Mailer', :manage, :eac_rails_base0_mailer
+      end
+
+      def map_eac_users_support
+        map_controller 'EacUsersSupport::Admin::Users', :manage, ::EacUsersSupport::User
       end
 
       def map_aranha
