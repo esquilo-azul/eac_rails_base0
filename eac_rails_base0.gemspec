@@ -28,7 +28,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'carrierwave', '~> 1.3', '>= 1.3.3'
   s.add_dependency 'coffee-rails', '~> 5.0'
   s.add_dependency 'eac_active_scaffold', '~> 0.2', '>= 0.2.3'
-  s.add_dependency 'eac_cli', '~> 0.33'
+  s.add_dependency 'eac_cli', '~> 0.35'
   s.add_dependency 'eac_rails_gem_support', '~> 0.7'
   s.add_dependency 'eac_rails_utils', '~> 0.17', '>= 0.17.1'
   s.add_dependency 'eac_ruby_utils', '~> 0.116'
