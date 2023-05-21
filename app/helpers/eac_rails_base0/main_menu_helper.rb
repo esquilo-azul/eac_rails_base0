@@ -3,7 +3,8 @@
 module EacRailsBase0
   module MainMenuHelper
     APP_MAIN_MENU_ENTRIES_METHOD = 'app_main_menu_entries'
-    ADMIN_ENTRIES = %w[eac_users_support tasks_scheduler aranha br_railties mailer].freeze
+    ADMIN_ENTRIES = %w[eac_users_support tasks_scheduler aranha br_railties mailer
+                       eac_rails_remotes].freeze
 
     def base0_app_main_menu_entries
       if respond_to?(APP_MAIN_MENU_ENTRIES_METHOD)
@@ -33,6 +34,12 @@ module EacRailsBase0
           main_app.send("#{action}_eac_rails_base0_mailer_index_path")
         ]
       end.to_h
+    end
+
+    def eac_rails_remotes_main_menu_admin_entries
+      {
+        ::EacRailsRemotes::Instance.model_name.human(count: 2) => [eac_rails_remotes.instances_path]
+      }
     end
 
     def eac_users_support_main_menu_admin_entries

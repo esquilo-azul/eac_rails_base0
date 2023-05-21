@@ -8,11 +8,15 @@ module EacRailsBase0
       include CanCanDry::AbilityMappingSets::Devise
       include CanCanDry::AbilityMappingSets::DeviseInvitable
 
-      MAP_METHODS = %w[aranha br_railties devise devise_invitable eac_rails_base0 eac_users_support
-                       tasks_schedulers].freeze
+      MAP_METHODS = %w[aranha br_railties devise devise_invitable eac_rails_base0 eac_rails_remotes
+                       eac_users_support tasks_schedulers].freeze
 
       def initialize
         MAP_METHODS.each { |m| send("map_#{m}") }
+      end
+
+      def map_eac_rails_remotes
+        map_controller 'EacRailsRemotes::Instances', :manage, ::EacRailsRemotes::Instance
       end
 
       def map_eac_rails_base0

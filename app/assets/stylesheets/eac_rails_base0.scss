@@ -1,13 +1,25 @@
+@import 'eac_rails_remotes/application';
+
 @import 'eac_users_support/application';
+
 @import 'eac_rails_base0/bootstrap_import';
+
 @import "eac_rails_utils";
+
 @import "aranha/application";
+
 @import "tasks_scheduler";
+
 @import 'br_railties';
+
 @import 'eac_active_scaffold';
+
 @import 'jquery-ui';
+
 @import 'eac_rails_base0/default_configuration';
+
 @import 'eac_rails_base0/components';
+
 @import 'eac_rails_base0/styles_legend';
 
 .alert-notice {

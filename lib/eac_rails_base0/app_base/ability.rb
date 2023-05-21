@@ -57,6 +57,7 @@ module EacRailsBase0
       def administrator_rules(user)
         return unless user.administrator?
 
+        can :manage, ::EacRailsRemotes::Instance
         can :manage, ::EacUsersSupport::User
         can :manage, ::Aranha::Address
         can :manage, ::Aranha::ProcessorConfiguration
