@@ -14,8 +14,7 @@ module EacRailsBase0
         map_controller 'EacUsersSupport::Admin::Users', :manage, ::EacUsersSupport::User
         map_aranha
         map_br_railties
-        map_controller 'ScheduledTasks', :manage, ::ScheduledTask
-        map_controller 'TasksSchedulerDaemon', :manage, ::ScheduledTask
+        map_tasks_schedulers
         map_eac_rails_base0
       end
 
@@ -32,6 +31,11 @@ module EacRailsBase0
       def map_br_railties
         map_controller 'BrRailties::FederalUnits', :manage, ::BrRailties::FederalUnit
         map_controller 'BrRailties::Municipalities', :manage, ::BrRailties::Municipality
+      end
+
+      def map_tasks_schedulers
+        map_controller 'ScheduledTasks', :manage, ::ScheduledTask
+        map_controller 'TasksSchedulerDaemon', :manage, ::ScheduledTask
       end
     end
   end
