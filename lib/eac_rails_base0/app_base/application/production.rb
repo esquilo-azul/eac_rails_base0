@@ -14,7 +14,7 @@ module EacRailsBase0App
 
       module ClassMethods
         def setup_aranha
-          ::Aranha::Selenium::Defaults.instance.headless = false
+          ::Aranha::Selenium::Defaults.instance.headless = true
         end
 
         def setup_assets
