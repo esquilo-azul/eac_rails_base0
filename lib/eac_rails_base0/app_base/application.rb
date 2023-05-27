@@ -21,6 +21,6 @@ module EacRailsBase0App
       end
     end
 
-    require_sub __FILE__, include_modules: true
+    require_sub __FILE__, include_modules: true, require_mode: :kernel
   end
 end
