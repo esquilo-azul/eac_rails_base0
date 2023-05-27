@@ -21,7 +21,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency 'aranha-parsers', '~> 0.19', '>= 0.19.1'
   s.add_dependency 'aranha-rails', '~> 0.8', '>= 0.8.4'
-  s.add_dependency 'aranha-selenium', '~> 0.5'
+  s.add_dependency 'aranha-selenium', '~> 0.6'
   s.add_dependency 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
   s.add_dependency 'br_railties', '~> 0.4', '>= 0.4.8'
   s.add_dependency 'can_can_dry', '~> 0.5', '>= 0.5.5'
