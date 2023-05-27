@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'eac_ruby_utils/core_ext'
-require 'aranha/selenium/driver_factory/base'
+require 'aranha/selenium/defaults'
 
 module EacRailsBase0App
   class Application < Rails::Application
@@ -14,7 +14,7 @@ module EacRailsBase0App
 
       module ClassMethods
         def setup_aranha
-          ::Aranha::Selenium::DriverFactory::Base.default_headless = false
+          ::Aranha::Selenium::Defaults.instance.headless = false
         end
 
         def setup_assets
