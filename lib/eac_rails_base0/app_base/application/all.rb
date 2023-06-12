@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'eac_fs/contexts'
+require 'eac_fs/storage_tree'
 require 'eac_ruby_utils/core_ext'
 
 module EacRailsBase0App
@@ -7,8 +9,8 @@ module EacRailsBase0App
     module All
       common_concern do
         setup('app_root', 'engines', 'local_engines', 'active_record', 'assets_cache',
-              'dependencies', 'defaults', 'localization', 'load_paths', 'loggers',
-              'unknown_asset_fallback')
+              'dependencies', 'fs_cache_context', 'defaults', 'localization', 'load_paths',
+              'loggers', 'unknown_asset_fallback')
       end
 
       module ClassMethods
@@ -34,6 +36,12 @@ module EacRailsBase0App
               env.logger
             )
           end
+        end
+
+        def setup_fs_cache_context
+          ::EacFs::Contexts.cache.push(
+            ::EacFs::StorageTree.new(::Rails.root.join('tmp', 'cache', 'eac_fs'))
+          )
         end
 
         def setup_engines
