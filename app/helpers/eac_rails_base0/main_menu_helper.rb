@@ -3,8 +3,7 @@
 module EacRailsBase0
   module MainMenuHelper
     APP_MAIN_MENU_ENTRIES_METHOD = 'app_main_menu_entries'
-    ADMIN_ENTRIES = %w[eac_users_support tasks_scheduler br_railties mailer
-                       eac_rails_remotes].freeze
+    ADMIN_ENTRIES = %w[eac_users_support tasks_scheduler mailer eac_rails_remotes].freeze
 
     def base0_app_main_menu_entries
       if respond_to?(APP_MAIN_MENU_ENTRIES_METHOD)
@@ -56,13 +55,6 @@ module EacRailsBase0
     def tasks_scheduler_main_menu_admin_entries
       {
         t('activerecord.models.scheduled_task.other') => [main_app.status_scheduled_tasks_path]
-      }
-    end
-
-    def br_railties_main_menu_admin_entries
-      {
-        ::BrRailties::FederalUnit.model_name.human(count: 2) => [br_railties.federal_units_path],
-        ::BrRailties::Municipality.model_name.human(count: 2) => [br_railties.municipalities_path]
       }
     end
   end
