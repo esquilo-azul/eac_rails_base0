@@ -24,7 +24,12 @@ module EacRailsBase0
       ADMIN_ENTRIES.map do |identifier|
         [::I18n.t("eac_rails_base0.main_menu.admin.#{identifier}"),
          send("#{identifier}_main_menu_admin_entries")]
-      end.to_h
+      end.to_h.merge(base0_app_main_menu_admin_entries_from_application)
+    end
+
+    # @return [Hash]
+    def base0_app_main_menu_admin_entries_from_application
+      ::Rails.application.root_menu.sub(:admin).to_dropdown_menu_entries(self)
     end
 
     def mailer_main_menu_admin_entries
