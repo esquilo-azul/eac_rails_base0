@@ -3,7 +3,7 @@
 module EacRailsBase0
   module MainMenuHelper
     APP_MAIN_MENU_ENTRIES_METHOD = 'app_main_menu_entries'
-    ADMIN_ENTRIES = %w[tasks_scheduler mailer].freeze
+    ADMIN_ENTRIES = %w[mailer].freeze
 
     def base0_app_main_menu_entries
       if respond_to?(APP_MAIN_MENU_ENTRIES_METHOD)
@@ -38,12 +38,6 @@ module EacRailsBase0
           main_app.send("#{action}_eac_rails_base0_mailer_index_path")
         ]
       end.to_h
-    end
-
-    def tasks_scheduler_main_menu_admin_entries
-      {
-        t('activerecord.models.scheduled_task.other') => [main_app.status_scheduled_tasks_path]
-      }
     end
   end
 end
