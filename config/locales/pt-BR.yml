@@ -34,7 +34,6 @@ pt-BR:
       send_test_successful: 'E-mail enviado para %{address}'
     main_menu:
       admin:
-        aranha: Aranha
         br_railties: BrRailties
         mailer: E-mail
         eac_rails_remotes: Remotos

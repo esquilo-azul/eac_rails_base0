@@ -3,7 +3,7 @@
 module EacRailsBase0
   module MainMenuHelper
     APP_MAIN_MENU_ENTRIES_METHOD = 'app_main_menu_entries'
-    ADMIN_ENTRIES = %w[eac_users_support tasks_scheduler aranha br_railties mailer
+    ADMIN_ENTRIES = %w[eac_users_support tasks_scheduler br_railties mailer
                        eac_rails_remotes].freeze
 
     def base0_app_main_menu_entries
@@ -56,15 +56,6 @@ module EacRailsBase0
     def tasks_scheduler_main_menu_admin_entries
       {
         t('activerecord.models.scheduled_task.other') => [main_app.status_scheduled_tasks_path]
-      }
-    end
-
-    def aranha_main_menu_admin_entries
-      {
-        ::Aranha::Address.model_name.human(count: 2) => [aranha.addresses_path],
-        ::Aranha::ProcessorConfiguration.model_name.human(count: 2) =>
-          [aranha.processor_configurations_path],
-        ::Aranha::StartPoint.model_name.human(count: 2) => [aranha.start_points_path]
       }
     end
 
