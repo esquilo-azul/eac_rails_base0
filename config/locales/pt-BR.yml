@@ -35,6 +35,5 @@ pt-BR:
     main_menu:
       admin:
         mailer: E-mail
-        eac_rails_remotes: Remotos
         eac_users_support: Usuários
         tasks_scheduler: Agendador
