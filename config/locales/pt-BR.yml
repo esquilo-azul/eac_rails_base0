@@ -32,6 +32,9 @@ pt-BR:
       send_submit: 'Enviar'
       send_test: 'Envio de e-mail de teste'
       send_test_successful: 'E-mail enviado para %{address}'
-    main_menu:
-      admin:
-        mailer: E-mail
+  eac_rails_utils:
+    menus:
+      root:
+        admin:
+          email:
+            __self: E-mail

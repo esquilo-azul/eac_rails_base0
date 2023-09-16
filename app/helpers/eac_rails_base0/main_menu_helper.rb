@@ -3,7 +3,7 @@
 module EacRailsBase0
   module MainMenuHelper
     APP_MAIN_MENU_ENTRIES_METHOD = 'app_main_menu_entries'
-    ADMIN_ENTRIES = %w[mailer].freeze
+    ADMIN_ENTRIES = %w[].freeze
 
     def base0_app_main_menu_entries
       if respond_to?(APP_MAIN_MENU_ENTRIES_METHOD)
@@ -29,15 +29,6 @@ module EacRailsBase0
     # @return [Hash]
     def base0_app_main_menu_admin_entries_from_application
       ::Rails.application.root_menu.sub(:admin).to_dropdown_menu_entries(self)
-    end
-
-    def mailer_main_menu_admin_entries
-      %w[info send_test].map do |action|
-        [
-          t("eac_rails_base0.mailer.#{action}"),
-          main_app.send("#{action}_eac_rails_base0_mailer_index_path")
-        ]
-      end.to_h
     end
   end
 end

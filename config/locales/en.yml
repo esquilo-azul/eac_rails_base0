@@ -9,6 +9,9 @@ en:
       send_submit: 'Enviar'
       send_test: 'E-mail sending test'
       send_test_successful: 'E-mail sended to %{address}'
-    main_menu:
-      admin:
-        mailer: E-mail
+  eac_rails_utils:
+    menus:
+      root:
+        admin:
+          email:
+            __self: E-mail
