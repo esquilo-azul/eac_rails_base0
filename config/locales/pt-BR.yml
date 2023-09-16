@@ -36,5 +36,6 @@ pt-BR:
     menus:
       root:
         admin:
+          __self: Administração
           email:
             __self: E-mail

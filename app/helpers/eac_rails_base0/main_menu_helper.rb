@@ -13,13 +13,7 @@ module EacRailsBase0
     end
 
     def base0_app_main_menu_default_entries
-      {
-        'Administração' => base0_app_main_menu_admin_entries
-      }
-    end
-
-    def base0_app_main_menu_admin_entries
-      ::Rails.application.root_menu.sub(:admin).to_dropdown_menu_entries(self)
+      ::Rails.application.root_menu.to_dropdown_menu_entries(self)
     end
   end
 end

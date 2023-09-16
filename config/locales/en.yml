@@ -13,5 +13,6 @@ en:
     menus:
       root:
         admin:
+          __self: Administration
           email:
             __self: E-mail
