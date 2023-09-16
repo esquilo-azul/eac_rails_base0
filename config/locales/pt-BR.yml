@@ -35,5 +35,4 @@ pt-BR:
     main_menu:
       admin:
         mailer: E-mail
-        eac_users_support: Usuários
         tasks_scheduler: Agendador
