@@ -34,7 +34,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'eac_rails_gem_support', '~> 0.7', '>= 0.7.1'
   s.add_dependency 'eac_rails_remotes', '~> 0.2'
   s.add_dependency 'eac_rails_utils', '~> 0.22'
-  s.add_dependency 'eac_ruby_utils', '~> 0.118', '>= 0.118.1'
+  s.add_dependency 'eac_ruby_utils', '~> 0.119', '>= 0.119.2'
   s.add_dependency 'eac_users_support', '~> 0.10', '>= 0.10.1'
   s.add_dependency 'fog-aws', '~> 3.19'
   s.add_dependency 'jbuilder', '~> 2.11', '>= 2.11.5'
