@@ -23,7 +23,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'aranha-rails', '~> 0.10'
   s.add_dependency 'aranha-selenium', '~> 0.7'
   s.add_dependency 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
-  s.add_dependency 'br_railties', '~> 0.4', '>= 0.4.8'
+  s.add_dependency 'br_railties', '~> 0.5'
   s.add_dependency 'can_can_dry', '~> 0.5', '>= 0.5.5'
   s.add_dependency 'carrierwave', '~> 1.3', '>= 1.3.3'
   s.add_dependency 'coffee-rails', '~> 5.0'
