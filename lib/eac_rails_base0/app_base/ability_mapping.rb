@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'delayed_job_active_record'
+
 module EacRailsBase0
   module AppBase
     class AbilityMapping
@@ -8,11 +10,16 @@ module EacRailsBase0
       include CanCanDry::AbilityMappingSets::Devise
       include CanCanDry::AbilityMappingSets::DeviseInvitable
 
-      MAP_METHODS = %w[aranha br_railties devise devise_invitable eac_rails_base0 eac_rails_remotes
-                       eac_users_support tasks_schedulers].freeze
+      MAP_METHODS = %w[aranha br_railties devise devise_invitable eac_rails_base0
+                       eac_rails_delayed_job eac_rails_remotes eac_users_support tasks_schedulers]
+                      .freeze
 
       def initialize
         MAP_METHODS.each { |m| send("map_#{m}") }
+      end
+
+      def map_eac_rails_delayed_job
+        map_controller 'EacRailsDelayedJob::DelayedJobs', :manage, ::Delayed::Job
       end
 
       def map_eac_rails_remotes
