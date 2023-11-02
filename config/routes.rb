@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   mount ::EacUsersSupport::Engine => '/'
   mount ::Aranha::Rails::Engine => '/aranha'
   mount ::BrRailties::Engine => '/br_railties'
+  mount ::EacRailsDelayedJob::Engine => '/delayed_job'
   mount ::EacRailsRemotes::Engine => '/remotes'
 
   namespace(:eac_rails_base0) do
