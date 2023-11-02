@@ -36,7 +36,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'eac_rails_utils', '~> 0.22', '>= 0.22.2'
   s.add_dependency 'eac_ruby_utils', '~> 0.119', '>= 0.119.2'
   s.add_dependency 'eac_users_support', '~> 0.11'
-  s.add_dependency 'fog-aws', '~> 3.19'
+  s.add_dependency 'fog-aws', '~> 3.21'
   s.add_dependency 'jbuilder', '~> 2.11', '>= 2.11.5'
   s.add_dependency 'jquery-rails', '~> 4.6'
   s.add_dependency 'jquery-ui-rails', '~> 6.0', '>= 6.0.1'
