@@ -1,40 +1,92 @@
-require:
-  - rubocop-rails
-  - rubocop-rspec
-
-AllCops:
-  TargetRailsVersion: 5.2
-  TargetRubyVersion: 2.4
+---
+inherit_gem:
+  eac_ruby_gem_support: ".rubocop.yml"
+Gemspec/RequiredRubyVersion:
   Exclude:
-    - '**/*/db/schema.rb'
-
-Layout/LineLength:
-  Max: 100
-
+  - eac_rails_base0.gemspec
+Layout/LeadingCommentSpace:
+  Exclude:
+  - config/initializers/backport_pg_10_support_to_rails_4.rb
+Layout/LineEndStringConcatenationIndentation:
+  Exclude:
+  - config/initializers/backport_pg_10_support_to_rails_4.rb
+Layout/MultilineMethodCallIndentation:
+  Exclude:
+  - app/helpers/eac_rails_base0/app_version_helper.rb
+  - config/initializers/menus.rb
+Lint/EmptyBlock:
+  Exclude:
+  - lib/tasks/eac_rails_base0.rake
+Lint/UselessMethodDefinition:
+  Exclude:
+  - lib/eac_rails_base0/x_engine.rb
 Metrics/AbcSize:
   Exclude:
-    - '**/db/migrate/*'
-
-Metrics/BlockLength:
+  - lib/eac_rails_base0/app_base/application/development.rb
+  - lib/eac_rails_base0/app_base/application/production.rb
+RSpec/Rails/InferredSpecType:
   Exclude:
-    - '**/*.gemspec'
-    - 'spec/**/*_spec.rb'
-
-Metrics/MethodLength:
+  - spec/features/current_user_spec.rb
+Rails/FilePath:
   Exclude:
-    - '**/db/migrate/*'
-
-Style/Documentation:
-  Enabled: false
-
-Style/AsciiComments:
-  Enabled: false
-
-Style/HashEachMethods:
-  Enabled: true
-
-Style/HashTransformKeys:
-  Enabled: true
-
-Style/HashTransformValues:
-  Enabled: true
+  - lib/eac_rails_base0/app_base/application/all.rb
+Rails/I18nLocaleTexts:
+  Exclude:
+  - app/controllers/eac_rails_base0/application_controller.rb
+Style/ExpandPathArguments:
+  Exclude:
+  - lib/eac_rails_base0/app_generator/templates/config.ru
+Style/FetchEnvVar:
+  Exclude:
+  - config/initializers/action_mailer.rb
+  - config/initializers/carrier_wave.rb
+Style/GlobalStdStream:
+  Exclude:
+  - lib/eac_rails_base0/app_base/application.rb
+Style/HashAsLastArrayItem:
+  Exclude:
+  - app/helpers/eac_rails_base0/user_menu_helper.rb
+Style/MapToHash:
+  Exclude:
+  - app/controllers/eac_rails_base0/mailer_controller.rb
+Style/RedundantConstantBase:
+  Exclude:
+  - Gemfile
+  - config/initializers/action_mailer.rb
+  - config/initializers/active_scaffold.rb
+  - config/initializers/menus.rb
+  - config/initializers/premailer.rb
+  - config/initializers/speaker.rb
+  - config/routes.rb
+  - eac_rails_base0.gemspec
+  - exe/eac_rails_base0_app
+  - lib/eac_rails_base0/app_generator/templates/Gemfile
+  - lib/eac_rails_base0/app_generator/templates/app/controllers/application_controller.rb
+  - lib/eac_rails_base0/app_generator/templates/config/application.rb
+  - lib/eac_rails_base0/app_generator/templates/config.ru
+  - lib/eac_rails_base0/patches/eac_rails_utils_links_helper_patch.rb
+  - lib/eac_rails_base0/patches/url_for_patch.rb
+  - lib/eac_rails_base0/rspec/shared_contexts/when_user_is_admin.rb
+  - lib/eac_rails_base0/rspec/shared_contexts/when_user_is_anonymous.rb
+  - lib/eac_rails_base0/rspec/shared_contexts/when_user_is_non_admin.rb
+  - lib/generators/eac_rails_base0/abilities/templates/ability.rb
+  - lib/generators/eac_rails_base0/abilities/templates/ability_mapping.rb
+  - lib/tasks/eac_rails_base0.rake
+  - spec/features/current_user_spec.rb
+  - spec/lib/rubocop_check_spec.rb
+  - spec/spec_helper.rb
+  - spec/support/rails_app_append/app/access/ability.rb
+  - spec/support/rails_app_append/app/access/ability_mapping.rb
+  - spec/support/rails_app_append/app/controllers/application_controller.rb
+  - spec/support/rails_app_append/app/controllers/home_controller.rb
+  - spec/support/rails_app_append/config/application.rb
+Style/RedundantFileExtensionInRequire:
+  Exclude:
+  - lib/eac_rails_base0/app_generator/templates/config/application.rb
+  - spec/support/rails_app_append/config/application.rb
+Style/RedundantInitialize:
+  Exclude:
+  - lib/eac_rails_base0/x_engine.rb
+Style/StringConcatenation:
+  Exclude:
+  - exe/eac_rails_base0_app

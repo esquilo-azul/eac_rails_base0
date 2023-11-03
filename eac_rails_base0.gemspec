@@ -31,7 +31,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'eac_cli', '~> 0.38'
   s.add_dependency 'eac_fs', '~> 0.16'
   s.add_dependency 'eac_rails_delayed_job', '~> 0.2'
-  s.add_dependency 'eac_rails_gem_support', '~> 0.7', '>= 0.7.1'
+  s.add_dependency 'eac_rails_gem_support', '~> 0.9'
   s.add_dependency 'eac_rails_remotes', '~> 0.2'
   s.add_dependency 'eac_rails_utils', '~> 0.22'
   s.add_dependency 'eac_ruby_utils', '~> 0.119', '>= 0.119.2'
