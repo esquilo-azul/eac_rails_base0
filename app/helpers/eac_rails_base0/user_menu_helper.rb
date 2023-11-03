@@ -4,11 +4,7 @@ module EacRailsBase0
   module UserMenuHelper
     # @return [Hash]
     def base0_user_menu_entries
-      r = {}
-      return base0_user_menu_entries_logged if current_user
-
-      r[t('devise.log_in')] = [eac_users_support.new_user_session_path]
-      r
+      current_user ? base0_user_menu_entries_logged : base0_user_menu_entries_unlogged
     end
 
     private
@@ -21,6 +17,13 @@ module EacRailsBase0
         },
         t('devise.log_out') => [eac_users_support.destroy_user_session_path,
                                 { link_method: :delete }]
+      }
+    end
+
+    # @return [Hash]
+    def base0_user_menu_entries_unlogged
+      {
+        t('devise.log_in') => [eac_users_support.new_user_session_path]
       }
     end
   end
