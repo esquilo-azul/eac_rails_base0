@@ -2,6 +2,7 @@
 //= require jquery_ujs
 //= require jquery-ui
 //= require turbolinks
+//= require eac_rails_delayed_job/application
 //= require eac_rails_remotes/application
 //= require eac_users_support/application
 //= require bootstrap-sprockets
