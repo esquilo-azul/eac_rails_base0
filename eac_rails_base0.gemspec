@@ -19,7 +19,7 @@ Gem::Specification.new do |s|
   s.bindir = 'exe'
   s.executables = s.files.grep(%r{^exe/}) { |f| File.basename(f) }
 
-  s.add_dependency 'aranha-parsers', '~> 0.21'
+  s.add_dependency 'aranha-parsers', '~> 0.22'
   s.add_dependency 'aranha-rails', '~> 0.10'
   s.add_dependency 'aranha-selenium', '~> 0.7'
   s.add_dependency 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
