@@ -14,5 +14,5 @@ end
 
 # Gems locais
 Dir["#{__dir__}/{sub/gems,engines}/*/*.gemspec"].each do |file|
-  gem ::File.basename(::File.dirname(file)), path: ::File.dirname(file)
+  gem File.basename(File.dirname(file)), path: File.dirname(file)
 end

@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
-::RSpec.shared_context 'when user is anonymous', shared_context: :metadata do
+RSpec.shared_context 'when user is anonymous', shared_context: :metadata do
   before do
     visit '/'
-    if link_exist?(::I18n.translate!('devise.log_out'))
-      click_link(::I18n.translate!('devise.log_out'))
-    elsif !link_exist?(::I18n.translate!('devise.log_in'))
+    if link_exist?(I18n.translate!('devise.log_out'))
+      click_link(I18n.translate!('devise.log_out'))
+    elsif !link_exist?(I18n.translate!('devise.log_in'))
       raise 'login nor logout link found'
     end
   end

@@ -13,5 +13,5 @@ class Premailer
 end
 
 require 'premailer/rails'
-::Premailer::Rails.config.merge!(remove_classes: true, remove_ids: true,
-                                 drop_unmergeable_css_rules: true)
+Premailer::Rails.config.merge!(remove_classes: true, remove_ids: true,
+                               drop_unmergeable_css_rules: true)

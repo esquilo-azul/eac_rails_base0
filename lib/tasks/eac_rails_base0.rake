@@ -15,17 +15,17 @@ namespace :eac_rails_base0 do
   end
 
   if rspec_loaded
-    ::RSpec::Core::RakeTask.new(:rspec) do |t|
+    RSpec::Core::RakeTask.new(:rspec) do |t|
       t.rspec_opts =
-        "--pattern '{spec,#{::EacRailsBase0::Paths.engines_subpath}/*/spec}/**/*_spec.rb'"
+        "--pattern '{spec,#{EacRailsBase0::Paths.engines_subpath}/*/spec}/**/*_spec.rb'"
     end
     Rake::Task['eac_rails_base0:rspec'].enhance ['db:test:prepare']
   end
 
   namespace :minitest do
-    { core: '', engines: "#{::EacRailsBase0::Paths.engines_subpath}/*/" }
+    { core: '', engines: "#{EacRailsBase0::Paths.engines_subpath}/*/" }
       .each do |name, pattern_prefix|
-      ::Rake::TestTask.new(name => 'test:prepare') do |t|
+      Rake::TestTask.new(name => 'test:prepare') do |t|
         t.libs << 'test'
         t.pattern = "#{pattern_prefix}test/**/*_test.rb"
         t.ruby_opts = %w[-W0]

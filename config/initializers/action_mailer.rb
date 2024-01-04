@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-unless ::Rails.env.test?
+unless Rails.env.test?
   Rails.application.configure do
     config.action_mailer.smtp_settings = {
       address: ENV['action_mailer_smtp_address'],
@@ -10,7 +10,7 @@ unless ::Rails.env.test?
       password: ENV['action_mailer_smtp_password'],
       authentication: ENV['action_mailer_smtp_authentication'],
       enable_starttls_auto:
-        ::EacRubyUtils::Boolean.parse(ENV['action_mailer_smtp_enable_starttls_auto'])
+        EacRubyUtils::Boolean.parse(ENV['action_mailer_smtp_enable_starttls_auto'])
     }
     %i[host port].each do |option|
       value = ENV["action_mailer_default_url_#{option}"]

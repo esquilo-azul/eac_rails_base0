@@ -36,37 +36,6 @@ Style/HashAsLastArrayItem:
 Style/MapToHash:
   Exclude:
   - app/controllers/eac_rails_base0/mailer_controller.rb
-Style/RedundantConstantBase:
-  Exclude:
-  - Gemfile
-  - config/initializers/action_mailer.rb
-  - config/initializers/active_scaffold.rb
-  - config/initializers/menus.rb
-  - config/initializers/premailer.rb
-  - config/initializers/speaker.rb
-  - config/routes.rb
-  - eac_rails_base0.gemspec
-  - exe/eac_rails_base0_app
-  - lib/eac_rails_base0/app_generator/templates/Gemfile
-  - lib/eac_rails_base0/app_generator/templates/app/controllers/application_controller.rb
-  - lib/eac_rails_base0/app_generator/templates/config/application.rb
-  - lib/eac_rails_base0/app_generator/templates/config.ru
-  - lib/eac_rails_base0/patches/eac_rails_utils_links_helper_patch.rb
-  - lib/eac_rails_base0/patches/url_for_patch.rb
-  - lib/eac_rails_base0/rspec/shared_contexts/when_user_is_admin.rb
-  - lib/eac_rails_base0/rspec/shared_contexts/when_user_is_anonymous.rb
-  - lib/eac_rails_base0/rspec/shared_contexts/when_user_is_non_admin.rb
-  - lib/generators/eac_rails_base0/abilities/templates/ability.rb
-  - lib/generators/eac_rails_base0/abilities/templates/ability_mapping.rb
-  - lib/tasks/eac_rails_base0.rake
-  - spec/features/current_user_spec.rb
-  - spec/lib/rubocop_check_spec.rb
-  - spec/spec_helper.rb
-  - spec/support/rails_app_append/app/access/ability.rb
-  - spec/support/rails_app_append/app/access/ability_mapping.rb
-  - spec/support/rails_app_append/app/controllers/application_controller.rb
-  - spec/support/rails_app_append/app/controllers/home_controller.rb
-  - spec/support/rails_app_append/config/application.rb
 Style/RedundantFileExtensionInRequire:
   Exclude:
   - lib/eac_rails_base0/app_generator/templates/config/application.rb
