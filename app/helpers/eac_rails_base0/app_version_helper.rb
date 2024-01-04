@@ -14,7 +14,7 @@ module EacRailsBase0
 
     def base0_app_version_by_version_file
       ::Rails.root.children.find { |file| file.basename.to_path.downcase == 'version' }
-             .if_present { |file| file.read.presence }
+        .if_present { |file| file.read.presence }
     end
   end
 end

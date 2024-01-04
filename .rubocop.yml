@@ -1,10 +1,6 @@
 ---
 inherit_gem:
   eac_ruby_gem_support: ".rubocop.yml"
-Layout/MultilineMethodCallIndentation:
-  Exclude:
-  - app/helpers/eac_rails_base0/app_version_helper.rb
-  - config/initializers/menus.rb
 Lint/EmptyBlock:
   Exclude:
   - lib/tasks/eac_rails_base0.rake
