@@ -11,7 +11,7 @@ module EacRailsBase0App
   class Application < Rails::Application
     class << self
       def new_stdout_logger
-        logger = ActiveSupport::Logger.new(STDOUT)
+        logger = ActiveSupport::Logger.new($stdout)
         logger.formatter = config.log_formatter
         ::ActiveSupport::TaggedLogging.new(logger)
       end

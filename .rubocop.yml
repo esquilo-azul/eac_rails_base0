@@ -20,9 +20,6 @@ Rails/FilePath:
 Rails/I18nLocaleTexts:
   Exclude:
   - app/controllers/eac_rails_base0/application_controller.rb
-Style/GlobalStdStream:
-  Exclude:
-  - lib/eac_rails_base0/app_base/application.rb
 Style/HashAsLastArrayItem:
   Exclude:
   - app/helpers/eac_rails_base0/user_menu_helper.rb
