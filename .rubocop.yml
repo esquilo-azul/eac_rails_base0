@@ -1,9 +1,6 @@
 ---
 inherit_gem:
   eac_ruby_gem_support: ".rubocop.yml"
-Lint/EmptyBlock:
-  Exclude:
-  - lib/tasks/eac_rails_base0.rake
 Lint/UselessMethodDefinition:
   Exclude:
   - lib/eac_rails_base0/x_engine.rb
