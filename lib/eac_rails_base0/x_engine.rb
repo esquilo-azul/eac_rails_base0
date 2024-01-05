@@ -36,10 +36,6 @@ module EacRailsBase0
       end
     end
 
-    def initialize(engine_instance)
-      super(engine_instance)
-    end
-
     def local?
       return false unless self.class.local_root.directory?
 

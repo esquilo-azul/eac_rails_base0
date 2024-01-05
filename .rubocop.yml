@@ -20,9 +20,6 @@ Rails/FilePath:
 Rails/I18nLocaleTexts:
   Exclude:
   - app/controllers/eac_rails_base0/application_controller.rb
-Style/RedundantInitialize:
-  Exclude:
-  - lib/eac_rails_base0/x_engine.rb
 Style/StringConcatenation:
   Exclude:
   - exe/eac_rails_base0_app
