@@ -4,9 +4,9 @@ module EacRailsBase0
   class MailerController < ::EacRailsBase0::ApplicationController
     def info
       klass = ::ActionMailer::Base
-      @sections = %w[default_params default_url_options smtp_settings].map do |section|
+      @sections = %w[default_params default_url_options smtp_settings].to_h do |section|
         ["#{klass}.#{section}", klass.send(section)]
-      end.to_h
+      end
     end
 
     def send_test
