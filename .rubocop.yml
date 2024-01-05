@@ -20,9 +20,6 @@ Rails/FilePath:
 Rails/I18nLocaleTexts:
   Exclude:
   - app/controllers/eac_rails_base0/application_controller.rb
-Style/ExpandPathArguments:
-  Exclude:
-  - lib/eac_rails_base0/app_generator/templates/config.ru
 Style/FetchEnvVar:
   Exclude:
   - config/initializers/action_mailer.rb
