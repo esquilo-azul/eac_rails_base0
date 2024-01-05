@@ -22,7 +22,7 @@ module EacRailsBase0App
           config.assets.compile = false
         end
 
-        def setup_general
+        def setup_general # rubocop:disable Metrics/AbcSize
           config.active_record.dump_schema_after_migration = false
           config.cache_classes = true
           config.eager_load = false

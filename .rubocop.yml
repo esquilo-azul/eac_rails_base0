@@ -1,10 +1,6 @@
 ---
 inherit_gem:
   eac_ruby_gem_support: ".rubocop.yml"
-Metrics/AbcSize:
-  Exclude:
-  - lib/eac_rails_base0/app_base/application/development.rb
-  - lib/eac_rails_base0/app_base/application/production.rb
 RSpec/Rails/InferredSpecType:
   Exclude:
   - spec/features/current_user_spec.rb

@@ -17,7 +17,7 @@ module EacRailsBase0App
           config.assets.quiet = true
         end
 
-        def setup_cache
+        def setup_cache # rubocop:disable Metrics/AbcSize
           if Rails.root.join('tmp/caching-dev.txt').exist?
             config.action_controller.perform_caching = true
             config.cache_store = :memory_store
@@ -30,7 +30,7 @@ module EacRailsBase0App
           end
         end
 
-        def setup_general
+        def setup_general # rubocop:disable Metrics/AbcSize
           config.cache_classes = false
           config.eager_load = false
           config.consider_all_requests_local = true
