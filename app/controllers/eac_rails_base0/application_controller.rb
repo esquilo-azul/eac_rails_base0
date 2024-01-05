@@ -25,7 +25,7 @@ module EacRailsBase0
         flash[:error] = "Conteúdo indisponível: #{exception}"
         redirect_to main_app.root_url
       else
-        flash[:danger] = 'Por favor faça o login.'
+        flash[:danger] = 'Por favor faça o login.' # rubocop:disable Rails/I18nLocaleTexts
         store_location_for(::EacUsersSupport::User, request.fullpath)
         redirect_to eac_users_support.new_user_session_path
       end
