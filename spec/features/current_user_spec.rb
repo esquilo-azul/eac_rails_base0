@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-RSpec.describe 'Current user', type: :feature do
+RSpec.describe 'Current user', type: :feature do # rubocop:disable RSpec/Rails/InferredSpecType
   ['anonymous', 'non admin', 'admin'].each do |user_type|
     context_title = "when user is #{user_type}"
     context context_title do
