@@ -3,24 +3,26 @@
 unless Rails.env.test?
   Rails.application.configure do
     config.action_mailer.smtp_settings = {
-      address: ENV['action_mailer_smtp_address'],
-      port: ENV['action_mailer_smtp_port'],
-      domain: ENV['action_mailer_smtp_domain'],
-      user_name: ENV['action_mailer_smtp_username'],
-      password: ENV['action_mailer_smtp_password'],
-      authentication: ENV['action_mailer_smtp_authentication'],
+      address: ENV.fetch('action_mailer_smtp_address', nil),
+      port: ENV.fetch('action_mailer_smtp_port', nil),
+      domain: ENV.fetch('action_mailer_smtp_domain', nil),
+      user_name: ENV.fetch('action_mailer_smtp_username', nil),
+      password: ENV.fetch('action_mailer_smtp_password', nil),
+      authentication: ENV.fetch('action_mailer_smtp_authentication', nil),
       enable_starttls_auto:
-        EacRubyUtils::Boolean.parse(ENV['action_mailer_smtp_enable_starttls_auto'])
+        EacRubyUtils::Boolean.parse(ENV.fetch('action_mailer_smtp_enable_starttls_auto', nil))
     }
     %i[host port].each do |option|
-      value = ENV["action_mailer_default_url_#{option}"]
+      value = ENV.fetch("action_mailer_default_url_#{option}", nil)
       if value.present?
         config.action_mailer.default_url_options ||= {}
         config.action_mailer.default_url_options[option] = value
       end
     end
     config.action_mailer.default_options ||= {}
-    config.action_mailer.default_options[:from] = ENV['action_mailer_default_options_from']
-    config.action_mailer.default_options[:reply_to] = ENV['action_mailer_default_options_reply_to']
+    config.action_mailer.default_options[:from] =
+      ENV.fetch('action_mailer_default_options_from', nil)
+    config.action_mailer.default_options[:reply_to] =
+      ENV.fetch('action_mailer_default_options_reply_to', nil)
   end
 end
