@@ -15,7 +15,7 @@ module EacRailsBase0App
 
       module ClassMethods
         def app_temporary_directory
-          ::File.join(::Dir.tmpdir, ::Rails.root.to_path.parameterize, 'tmp')
+          Rails.root.join(::Rails.root.to_path.parameterize, 'tmp').to_s
         end
 
         def setup_app_root
@@ -36,7 +36,7 @@ module EacRailsBase0App
 
         def setup_fs_cache_context
           ::EacFs::Contexts.cache.push(
-            ::EacFs::StorageTree.new(::Rails.root.join('tmp', 'cache', 'eac_fs'))
+            ::EacFs::StorageTree.new(::Rails.root.join('tmp/cache/eac_fs'))
           )
         end
 
@@ -61,7 +61,7 @@ module EacRailsBase0App
         end
 
         def setup_deprecated_migrations
-          path = ::Rails.root.join('db', 'migrate_deprecated')
+          path = ::Rails.root.join('db/migrate_deprecated')
           config.paths['db/migrate'] << path if path.directory?
         end
 

@@ -1,9 +1,6 @@
 ---
 inherit_gem:
   eac_ruby_gem_support: ".rubocop.yml"
-Rails/FilePath:
-  Exclude:
-  - lib/eac_rails_base0/app_base/application/all.rb
 Rails/I18nLocaleTexts:
   Exclude:
   - app/controllers/eac_rails_base0/application_controller.rb
