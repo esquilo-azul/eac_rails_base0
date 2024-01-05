@@ -20,10 +20,6 @@ Rails/FilePath:
 Rails/I18nLocaleTexts:
   Exclude:
   - app/controllers/eac_rails_base0/application_controller.rb
-Style/RedundantFileExtensionInRequire:
-  Exclude:
-  - lib/eac_rails_base0/app_generator/templates/config/application.rb
-  - spec/support/rails_app_append/config/application.rb
 Style/RedundantInitialize:
   Exclude:
   - lib/eac_rails_base0/x_engine.rb
