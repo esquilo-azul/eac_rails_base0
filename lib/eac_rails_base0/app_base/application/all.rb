@@ -14,8 +14,9 @@ module EacRailsBase0App
       end
 
       module ClassMethods
+        # @return [String]
         def app_temporary_directory
-          Rails.root.join(::Rails.root.to_path.parameterize, 'tmp').to_s
+          ::Dir.tmpdir.to_pathname.join(::Rails.root.to_path.parameterize, 'tmp')
         end
 
         def setup_app_root
