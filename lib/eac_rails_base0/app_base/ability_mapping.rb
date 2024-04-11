@@ -47,6 +47,7 @@ module EacRailsBase0
 
       def map_tasks_schedulers
         map_controller 'ScheduledTasks', :manage, ::ScheduledTask
+        map_controller 'ScheduledTaskStatuses', :manage, ::ScheduledTask
         map_controller 'TasksSchedulerDaemon', :manage, ::ScheduledTask
       end
     end
