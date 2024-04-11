@@ -2,6 +2,7 @@
 
 require 'eac_fs/contexts'
 require 'eac_fs/storage_tree'
+require 'eac_rails_base0/x_engine'
 require 'eac_ruby_utils/core_ext'
 
 module EacRailsBase0App
