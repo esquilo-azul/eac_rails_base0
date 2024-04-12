@@ -8,6 +8,7 @@ require 'eac_active_scaffold/engine'
 require 'eac_rails_delayed_job/engine'
 require 'eac_rails_remotes/engine'
 require 'eac_rails_utils/engine'
+require 'eac_rails_utils/engine_helper'
 require 'eac_users_support/engine'
 require 'rails-i18n'
 require 'jquery-rails'
@@ -17,5 +18,6 @@ require 'turbolinks'
 
 module EacRailsBase0
   class Engine < ::Rails::Engine
+    include ::EacRailsUtils::EngineHelper
   end
 end
