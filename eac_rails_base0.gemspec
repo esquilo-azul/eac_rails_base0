@@ -51,7 +51,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'recordselect', '~> 3.10', '>= 3.10.8'
   s.add_dependency 'sass-rails', '~> 5.1'
   s.add_dependency 'spring', '~> 4.2'
-  s.add_dependency 'tasks_scheduler', '~> 0.8'
+  s.add_dependency 'tasks_scheduler', '~> 0.9'
   s.add_dependency 'turbolinks', '~> 5.2', '>= 5.2.1'
   s.add_dependency 'uglifier', '~> 4.2'
   s.add_runtime_dependency 'pg', '~> 1.5', '>= 1.5.3'
