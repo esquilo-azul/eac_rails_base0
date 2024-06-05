@@ -11,7 +11,7 @@ module EacRailsBase0
 
       module InstanceMethods
         def url_for(options = nil)
-          super(options)
+          super
         rescue ActionController::UrlGenerationError
           engines_url_for(options)
         end

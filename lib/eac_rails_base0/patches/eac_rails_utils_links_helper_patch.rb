@@ -19,7 +19,7 @@ module EacRailsBase0
         end
 
         def object_path_by_class(*args)
-          super(*args).gsub(/_url\z/, '_path')
+          super.gsub(/_url\z/, '_path')
         end
       end
     end

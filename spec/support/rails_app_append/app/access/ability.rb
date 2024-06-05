@@ -2,7 +2,7 @@
 
 class Ability < EacRailsBase0::AppBase::Ability
   def initialize(user)
-    super(user)
+    super
     can :read, :home
   end
 end
