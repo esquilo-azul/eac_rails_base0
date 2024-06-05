@@ -28,7 +28,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'can_can_dry', '~> 0.5', '>= 0.5.7'
   s.add_dependency 'carrierwave', '~> 1.3', '>= 1.3.4'
   s.add_dependency 'coffee-rails', '~> 5.0'
-  s.add_dependency 'eac_active_scaffold', '~> 0.6'
+  s.add_dependency 'eac_active_scaffold', '~> 0.6', '>= 0.6.1'
   s.add_dependency 'eac_cli', '~> 0.40', '>= 0.40.1'
   s.add_dependency 'eac_fs', '~> 0.17'
   s.add_dependency 'eac_rails_delayed_job', '~> 0.2', '>= 0.2.1'
