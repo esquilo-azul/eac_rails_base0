@@ -62,8 +62,6 @@ module EacRailsBase0
         can :manage, ::Aranha::Address
         can :manage, ::Aranha::ProcessorConfiguration
         can :manage, ::Aranha::StartPoint
-        can :manage, ::BrRailties::FederalUnit
-        can :manage, ::BrRailties::Municipality
         can :manage, ::ScheduledTask
         can :manage, :eac_rails_base0_mailer
       end

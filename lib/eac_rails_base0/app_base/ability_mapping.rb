@@ -10,7 +10,7 @@ module EacRailsBase0
       include CanCanDry::AbilityMappingSets::Devise
       include CanCanDry::AbilityMappingSets::DeviseInvitable
 
-      MAP_METHODS = %w[aranha br_railties devise devise_invitable eac_rails_base0
+      MAP_METHODS = %w[aranha devise devise_invitable eac_rails_base0
                        eac_rails_delayed_job eac_rails_remotes eac_users_support tasks_schedulers]
                       .freeze
 
@@ -38,11 +38,6 @@ module EacRailsBase0
         map_controller 'Aranha::Addresses', :manage, ::Aranha::Address
         map_controller 'Aranha::ProcessorConfigurations', :manage, ::Aranha::ProcessorConfiguration
         map_controller 'Aranha::StartPoints', :manage, ::Aranha::StartPoint
-      end
-
-      def map_br_railties
-        map_controller 'BrRailties::FederalUnits', :manage, ::BrRailties::FederalUnit
-        map_controller 'BrRailties::Municipalities', :manage, ::BrRailties::Municipality
       end
 
       def map_tasks_schedulers
