@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'eac_ruby_utils/core_ext'
+require 'eac_ruby_utils'
 require 'rails/all'
 
 # Require the gems listed in Gemfile, including any gems

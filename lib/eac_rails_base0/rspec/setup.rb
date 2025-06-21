@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-require 'eac_ruby_utils/core_ext'
 require 'factory_bot'
 
 module EacRailsBase0
