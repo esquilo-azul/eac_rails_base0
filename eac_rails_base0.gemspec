@@ -54,5 +54,5 @@ Gem::Specification.new do |s|
   s.add_dependency 'spring', '~> 4.3'
   s.add_dependency 'tasks_scheduler', '~> 0.9', '>= 0.9.4'
   s.add_dependency 'turbolinks', '~> 5.2', '>= 5.2.1'
-  s.add_dependency 'uglifier', '~> 4.2'
+  s.add_dependency 'uglifier', '~> 4.2', '>= 4.2.1'
 end
