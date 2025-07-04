@@ -6,7 +6,7 @@ class Premailer
   class << self
     alias old_is_media_query? is_media_query?
 
-    def is_media_query?(media_types) # rubocop:disable Naming/PredicateName
+    def is_media_query?(media_types) # rubocop:disable Naming/PredicatePrefix
       media_types.include?(:print) || old_is_media_query?(media_types)
     end
   end

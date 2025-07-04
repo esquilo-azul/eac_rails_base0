@@ -10,7 +10,7 @@ module EacRailsBase0
     validates :logged_user_address, allow_blank: true, format: { with: URI::MailTo::EMAIL_REGEXP }
     validates :address, presence: true, format: { with: URI::MailTo::EMAIL_REGEXP }
 
-    def save
+    def save # rubocop:disable Naming/PredicateMethod
       return false unless valid?
 
       send_mail
