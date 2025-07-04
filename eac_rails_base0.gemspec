@@ -48,7 +48,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'premailer-rails', '~> 1.12'
   s.add_dependency 'puma', '~> 5.6', '>= 5.6.9'
   s.add_dependency 'rails', '~> 6.1'
-  s.add_dependency 'rails-i18n', '~> 7.0', '>= 7.0.9'
+  s.add_dependency 'rails-i18n', '~> 7.0', '>= 7.0.10'
   s.add_dependency 'recordselect', '~> 3.10', '>= 3.10.9'
   s.add_dependency 'sass-rails', '~> 5.1'
   s.add_dependency 'spring', '~> 4.2', '>= 4.2.1'
