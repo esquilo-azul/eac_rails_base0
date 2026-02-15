@@ -3,12 +3,13 @@
 require 'rails'
 require 'active_record'
 
+require 'eac_active_scaffold'
+
 require 'aranha/rails/engine'
 require 'br_railties/engine'
 require 'bootstrap-sass'
 require 'can_can_dry'
 require 'can_can_dry/engine'
-require 'eac_active_scaffold/engine'
 require 'eac_rails_base0/engine'
 require 'eac_rails_delayed_job/engine'
 require 'eac_rails_remotes/engine'
