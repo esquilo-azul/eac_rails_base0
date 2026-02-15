@@ -24,12 +24,12 @@ namespace :eac_rails_base0 do
   namespace :minitest do
     { core: '', engines: "#{EacRailsBase0::Paths.engines_subpath}/*/" }
       .each do |name, pattern_prefix|
-      Rake::TestTask.new(name => 'test:prepare') do |t|
-        t.libs << 'test'
-        t.pattern = "#{pattern_prefix}test/**/*_test.rb"
-        t.ruby_opts = %w[-W0]
-        t.verbose = false
-      end
+        Rake::TestTask.new(name => 'test:prepare') do |t|
+          t.libs << 'test'
+          t.pattern = "#{pattern_prefix}test/**/*_test.rb"
+          t.ruby_opts = %w[-W0]
+          t.verbose = false
+        end
     end
   end
 

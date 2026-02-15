@@ -29,4 +29,4 @@ end
 require 'eac_rails_utils/links_helper'
 patch = EacRailsBase0::Patches::EacRailsUtilsLinksHelper
 target = EacRailsUtils::LinksHelper
-target.prepend(patch) unless target.included_modules.include?(patch)
+target.prepend(patch) unless target.include?(patch)

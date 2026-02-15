@@ -38,4 +38,4 @@ end
 
 patch = EacRailsBase0::Patches::UrlForPatch
 target = ActionDispatch::Routing::UrlFor
-target.prepend(patch) unless target.included_modules.include?(patch)
+target.prepend(patch) unless target.include?(patch)
