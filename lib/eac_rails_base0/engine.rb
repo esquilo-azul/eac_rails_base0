@@ -22,12 +22,6 @@ require 'sass-rails'
 require 'tasks_scheduler/engine'
 require 'turbolinks'
 
-# require 'eac_rails_utils'
-# require 'eac_ruby_utils/core_ext'
-# require 'eac_users_support'
-# require 'tasks_scheduler'
-# require 'br_railties'
-
 require_dependency 'eac_rails_base0/app_base/ability_mapping'
 require_dependency 'eac_rails_base0/app_base/ability'
 require_dependency 'eac_rails_base0/patches/url_for_patch'
