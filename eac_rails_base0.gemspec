@@ -39,7 +39,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'eac_users_support', '~> 0.11', '>= 0.11.1'
   s.add_dependency 'fog-aws', '~> 3.33', '>= 3.33.1'
   s.add_dependency 'jbuilder', '~> 2.13'
-  s.add_dependency 'jquery-rails', '~> 4.6'
+  s.add_dependency 'jquery-rails', '~> 4.6', '>= 4.6.1'
   s.add_dependency 'jquery-ui-rails', '~> 6.0', '>= 6.0.1'
   s.add_dependency 'launchy', '~> 2.5', '>= 2.5.2'
   s.add_dependency 'letter_opener', '~> 1.10'
