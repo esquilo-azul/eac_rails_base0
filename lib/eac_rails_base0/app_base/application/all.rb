@@ -42,7 +42,7 @@ module EacRailsBase0App
         end
 
         def setup_engines
-          require 'eac_rails_base0/engine'
+          require 'eac_rails_base0'
         end
 
         def setup_local_engines
