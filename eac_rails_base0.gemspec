@@ -21,7 +21,7 @@ Gem::Specification.new do |s|
   s.required_ruby_version = '>= 2.7'
 
   s.add_dependency 'aranha-parsers', '~> 0.26', '>= 0.26.2'
-  s.add_dependency 'aranha-rails', '~> 0.10', '>= 0.10.1'
+  s.add_dependency 'aranha-rails', '~> 0.11'
   s.add_dependency 'aranha-selenium', '~> 0.13', '>= 0.13.1'
   s.add_dependency 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
   s.add_dependency 'br_railties', '~> 0.6'
