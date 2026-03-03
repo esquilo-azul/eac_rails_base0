@@ -8,6 +8,7 @@ require 'eac_rails_utils'
 require 'tasks_scheduler'
 
 require 'aranha/rails'
+require 'aranha/selenium'
 require 'br_railties/engine'
 require 'bootstrap-sass'
 require 'can_can_dry'
