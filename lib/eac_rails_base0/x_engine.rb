@@ -12,7 +12,7 @@ module EacRailsBase0
 
       def require_local
         local_roots.each do |root|
-          require_dependency "#{root.basename.to_path.gsub('-', '/')}/engine"
+          require root.basename.to_path.gsub('-', '/').to_s
         end
       end
 
