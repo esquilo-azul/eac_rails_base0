@@ -7,20 +7,22 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-module EacRailsBase0App
-  class Application < Rails::Application
-    class << self
-      def new_stdout_logger
-        logger = ActiveSupport::Logger.new($stdout)
-        logger.formatter = config.log_formatter
-        ::ActiveSupport::TaggedLogging.new(logger)
+module EacRailsBase0
+  module AppBase
+    class Application < Rails::Application
+      class << self
+        def new_stdout_logger
+          logger = ActiveSupport::Logger.new($stdout)
+          logger.formatter = config.log_formatter
+          ::ActiveSupport::TaggedLogging.new(logger)
+        end
+
+        def setup(*args)
+          args.each { |a| send("setup_#{a}") }
+        end
       end
 
-      def setup(*args)
-        args.each { |a| send("setup_#{a}") }
-      end
+      require_sub __FILE__, include_modules: true, require_mode: :kernel
     end
-
-    require_sub __FILE__, include_modules: true, require_mode: :kernel
   end
 end

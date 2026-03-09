@@ -1,39 +1,41 @@
 # frozen_string_literal: true
 
-module EacRailsBase0App
-  class Application < Rails::Application
-    module Envvars
-      ENVVARS_FILE_BASENAME = 'envvars'
-      ENVVARS_DIRECTORY_NAME = "#{ENVVARS_FILE_BASENAME}.d"
-      ENVVARS_FILE_EXTENSIONS = %w[.yml .yaml].freeze
+module EacRailsBase0
+  module AppBase
+    class Application < Rails::Application
+      module Envvars
+        ENVVARS_FILE_BASENAME = 'envvars'
+        ENVVARS_DIRECTORY_NAME = "#{ENVVARS_FILE_BASENAME}.d"
+        ENVVARS_FILE_EXTENSIONS = %w[.yml .yaml].freeze
 
-      common_concern do
-        setup('envvars')
-      end
-
-      module ClassMethods
-        def config_root
-          ::Rails.root.join('config')
+        common_concern do
+          setup('envvars')
         end
 
-        def envvars_files
-          ENVVARS_FILE_EXTENSIONS.flat_map do |extension|
-            [config_root.join("#{ENVVARS_FILE_BASENAME}#{extension}")] +
-              config_root.join(ENVVARS_DIRECTORY_NAME).glob("*#{extension}")
+        module ClassMethods
+          def config_root
+            ::Rails.root.join('config')
           end
-        end
 
-        def load_envvars_file(path)
-          return unless path.exist?
+          def envvars_files
+            ENVVARS_FILE_EXTENSIONS.flat_map do |extension|
+              [config_root.join("#{ENVVARS_FILE_BASENAME}#{extension}")] +
+                config_root.join(ENVVARS_DIRECTORY_NAME).glob("*#{extension}")
+            end
+          end
 
-          vars = ::EacRubyUtils::Yaml.load(path.read)
-          raise "\"#{path}\" does not contain a Hash" unless vars.is_a?(::Hash)
+          def load_envvars_file(path)
+            return unless path.exist?
 
-          vars.each { |name, value| ENV[name.to_s] = value.to_s }
-        end
+            vars = ::EacRubyUtils::Yaml.load(path.read)
+            raise "\"#{path}\" does not contain a Hash" unless vars.is_a?(::Hash)
 
-        def setup_envvars
-          envvars_files.each { |path| load_envvars_file(path) }
+            vars.each { |name, value| ENV[name.to_s] = value.to_s }
+          end
+
+          def setup_envvars
+            envvars_files.each { |path| load_envvars_file(path) }
+          end
         end
       end
     end
