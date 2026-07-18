@@ -5,7 +5,7 @@ module EacRailsBase0
     class Application < Rails::Application
       module Envvars
         ENVVARS_FILE_BASENAME = 'envvars'
-        ENVVARS_DIRECTORY_NAME = "#{ENVVARS_FILE_BASENAME}.d"
+        ENVVARS_DIRECTORY_NAME = "#{ENVVARS_FILE_BASENAME}.d".freeze
         ENVVARS_FILE_EXTENSIONS = %w[.yml .yaml].freeze
 
         common_concern do

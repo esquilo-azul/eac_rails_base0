@@ -18,7 +18,7 @@ Gem::Specification.new do |s|
   s.files = Dir['{app,config,exe,lib}/**/*', 'Gemfile', 'README.rdoc']
   s.bindir = 'exe'
   s.executables = s.files.grep(%r{^exe/}) { |f| File.basename(f) }
-  s.required_ruby_version = '>= 2.7'
+  s.required_ruby_version = '>= 3.2'
 
   s.add_dependency 'aranha-parsers', '~> 0.29'
   s.add_dependency 'aranha-rails', '~> 0.11', '>= 0.11.2'
