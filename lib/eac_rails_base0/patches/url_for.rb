@@ -2,7 +2,7 @@
 
 module EacRailsBase0
   module Patches
-    module UrlForPatch
+    module UrlFor
       class << self
         def included(base)
           base.prepend(InstanceMethods)
@@ -36,6 +36,6 @@ module EacRailsBase0
   end
 end
 
-patch = EacRailsBase0::Patches::UrlForPatch
+patch = EacRailsBase0::Patches::UrlFor
 target = ActionDispatch::Routing::UrlFor
 target.prepend(patch) unless target.include?(patch)
