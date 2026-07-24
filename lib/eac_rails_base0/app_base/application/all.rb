@@ -55,7 +55,7 @@ module EacRailsBase0
           end
 
           def setup_defaults
-            config.load_defaults 7.0
+            config.load_defaults 7.1
           end
 
           def setup_dependencies
