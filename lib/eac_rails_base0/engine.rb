@@ -25,7 +25,6 @@ require 'turbolinks'
 
 require_dependency 'eac_rails_base0/app_base/ability_mapping'
 require_dependency 'eac_rails_base0/app_base/ability'
-require_dependency 'eac_rails_base0/patches/url_for'
 require_dependency 'eac_rails_base0/x_engine'
 
 module EacRailsBase0

@@ -35,7 +35,3 @@ module EacRailsBase0
     end
   end
 end
-
-patch = EacRailsBase0::Patches::UrlFor
-target = ActionDispatch::Routing::UrlFor
-target.prepend(patch) unless target.include?(patch)
