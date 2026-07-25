@@ -22,7 +22,3 @@ Add this to your Gemfile:
 Run:
 
     bundle install
-
-And:
-
-    rails generator eac_rails_base0
