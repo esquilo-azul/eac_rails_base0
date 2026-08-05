@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'aranha/selenium/driver_options'
+require 'terser'
 
 module EacRailsBase0
   module AppBase
@@ -18,7 +19,7 @@ module EacRailsBase0
           end
 
           def setup_assets
-            config.assets.js_compressor = :uglifier
+            config.assets.js_compressor = :terser
             config.assets.compile = false
           end
 
