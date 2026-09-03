@@ -30,5 +30,9 @@ require_dependency 'eac_rails_base0/x_engine'
 module EacRailsBase0
   class Engine < ::Rails::Engine
     include ::EacRailsUtils::EngineHelper
+
+    initializer 'eac_rails_base0.assets.precompile' do |app|
+      app.config.assets.precompile += %w[mailer.css]
+    end
   end
 end
