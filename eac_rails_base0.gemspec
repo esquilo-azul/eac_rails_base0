@@ -41,6 +41,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'jbuilder', '~> 2.15', '>= 2.15.1'
   s.add_dependency 'jquery-rails', '~> 4.6', '>= 4.6.1'
   s.add_dependency 'jquery-ui-rails', '~> 6.0', '>= 6.0.1'
+  s.add_dependency 'json', '< 3'
   s.add_dependency 'launchy', '~> 2.5', '>= 2.5.2'
   s.add_dependency 'letter_opener', '~> 1.10'
   s.add_dependency 'listen', '~> 3.10'
