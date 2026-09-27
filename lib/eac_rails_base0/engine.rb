@@ -20,7 +20,7 @@ require 'eac_users_support/engine'
 require 'jquery-rails'
 require 'jquery-ui-rails'
 require 'rails-i18n'
-require 'sass-rails'
+require 'dartsass-sprockets'
 require 'turbolinks'
 
 require_dependency 'eac_rails_base0/app_base/ability_mapping'
