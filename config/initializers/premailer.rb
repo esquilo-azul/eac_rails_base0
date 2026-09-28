@@ -14,4 +14,4 @@ end
 
 require 'premailer/rails'
 Premailer::Rails.config.merge!(remove_classes: true, remove_ids: true,
-                               drop_unmergeable_css_rules: true)
+                               drop_unmergeable_css_rules: true, css_to_attributes: false)
