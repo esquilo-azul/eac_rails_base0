@@ -53,6 +53,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'rails-i18n', '~> 8.1'
   s.add_dependency 'recordselect', '~> 3.10', '>= 3.10.9'
   s.add_dependency 'spring', '~> 4.7'
+  s.add_dependency 'sprockets', '~> 3.7', '>= 3.7.5'
   s.add_dependency 'tasks_scheduler', '~> 0.11', '>= 0.11.2'
   s.add_dependency 'terser', '~> 1.2', '>= 1.2.8'
   s.add_dependency 'turbolinks', '~> 5.2', '>= 5.2.1'
