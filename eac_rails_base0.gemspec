@@ -26,7 +26,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
   s.add_dependency 'br_railties', '~> 0.6', '>= 0.6.2'
   s.add_dependency 'can_can_dry', '~> 0.5', '>= 0.5.7'
-  s.add_dependency 'carrierwave', '~> 1.3', '>= 1.3.4'
+  s.add_dependency 'carrierwave', '~> 3.1', '>= 3.1.4'
   s.add_dependency 'coffee-rails', '~> 5.0'
   s.add_dependency 'dartsass-sprockets', '~> 3.2', '>= 3.2.1'
   s.add_dependency 'eac_active_scaffold', '~> 0.11'
